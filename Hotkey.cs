@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace MovablePython
+namespace Binder
 {
     public class Hotkey : IMessageFilter
     {

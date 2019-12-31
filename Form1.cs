@@ -1,5 +1,5 @@
-﻿using Microsoft.Win32;
-using MovablePython;
+﻿using Binder;
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -66,8 +66,26 @@ namespace T3pyRYster
             }
         }
 
+        private bool LoadThemeThatNow()
+        {
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\T3Settings\T3pyRyster");
+            if (key.GetValue("Theme") == null)
+            {
+                key.CreateSubKey("Theme");
+                key.SetValue("Theme", "0");
+            }
+            if (key.GetValue("Theme").ToString() == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private readonly T3DATA Data = new T3DATA();
-        private readonly Hotkey hkF1 = new Hotkey(Keys.F1,false,true,false,false);
+        private readonly Hotkey hkF1 = new Hotkey(Keys.F1, false, true, false, false);
         private readonly Hotkey hkF2 = new Hotkey(Keys.F2, false, true, false, false);
         private readonly Hotkey hkF3 = new Hotkey(Keys.F3, false, true, false, false);
         private readonly Hotkey hkF4 = new Hotkey(Keys.F4, false, true, false, false);
@@ -77,6 +95,7 @@ namespace T3pyRYster
         private readonly Hotkey hkF8 = new Hotkey(Keys.F8, false, true, false, false);
         private readonly Hotkey hkF9 = new Hotkey(Keys.F9, false, true, false, false);
         private readonly Hotkey hkF10 = new Hotkey(Keys.F10, false, true, false, false);
+
         public Form1()
         {
             InitializeComponent();
@@ -101,6 +120,67 @@ namespace T3pyRYster
             hkF9.Register(this);
             hkF10.Pressed += delegate { Clipboard.SetText(TextTen.Text); SendKeys.Send("^{v}"); };
             hkF10.Register(this);
+            CurrTheme = LoadThemeThatNow();
+            if (CurrTheme == false)
+            {
+                black = System.Drawing.Color.Black;
+                white = System.Drawing.Color.White;
+            }
+            else
+            {
+                black = System.Drawing.Color.White;
+                white = System.Drawing.Color.Black;
+            }
+            CloseButton.BackColor = black;
+            CloseButton.ForeColor = white;
+            CopyOne.BackColor = black;
+            CopyOne.ForeColor = white;
+            CopyTwo.BackColor = black;
+            CopyTwo.ForeColor = white;
+            CopyThree.BackColor = black;
+            CopyThree.ForeColor = white;
+            CopyFour.BackColor = black;
+            CopyFour.ForeColor = white;
+            CopyFive.BackColor = black;
+            CopyFive.ForeColor = white;
+            CopySix.BackColor = black;
+            CopySix.ForeColor = white;
+            CopySeven.BackColor = black;
+            CopySeven.ForeColor = white;
+            CopyEight.BackColor = black;
+            CopyEight.ForeColor = white;
+            CopyNine.ForeColor = white;
+            CopyNine.BackColor = black;
+            CopyTen.ForeColor = white;
+            CopyTen.BackColor = black;
+            NameLabel.BackColor = black;
+            NameLabel.ForeColor = white;
+            TextOne.BackColor = black;
+            TextOne.ForeColor = white;
+            TextTwo.BackColor = black;
+            TextTwo.ForeColor = white;
+            TextThree.BackColor = black;
+            TextThree.ForeColor = white;
+            TextFour.BackColor = black;
+            TextFour.ForeColor = white;
+            TextFive.BackColor = black;
+            TextFive.ForeColor = white;
+            TextSix.BackColor = black;
+            TextSix.ForeColor = white;
+            TextSeven.BackColor = black;
+            TextSeven.ForeColor = white;
+            TextEight.BackColor = black;
+            TextEight.ForeColor = white;
+            TextNine.BackColor = black;
+            TextNine.ForeColor = white;
+            TextTen.BackColor = black;
+            TextTen.ForeColor = white;
+            HideButton.BackColor = black;
+            HideButton.ForeColor = white;
+            SettingsButton.BackColor = black;
+            SettingsButton.ForeColor = white;
+            BackColor = black;
+            ForeColor = white;
         }
 
         private void LoadValues()
@@ -179,5 +259,11 @@ namespace T3pyRYster
         private void CopyNine_Click(object sender, EventArgs e) => Clipboard.SetText(TextNine.Text);
 
         private void CopyTen_Click(object sender, EventArgs e) => Clipboard.SetText(TextTen.Text);
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
+        }
     }
 }
