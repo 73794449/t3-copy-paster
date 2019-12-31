@@ -240,25 +240,64 @@ namespace T3pyRYster
 
         private void TextTen_TextChanged(object sender, EventArgs e) => Data.SetValue(10, TextTen.Text);
 
-        private void CopyOne_Click(object sender, EventArgs e) => Clipboard.SetText(TextOne.Text);
+        private void CopyOne_Click(object sender, EventArgs e)
+        {
+            if (TextOne.Text != "") 
+            {Clipboard.SetText(TextOne.Text);} 
+        }
+        private void CopyTwo_Click(object sender, EventArgs e)
+        {
+            if (TextTwo.Text != "")
+            {Clipboard.SetText(TextTwo.Text);}
+        }
 
-        private void CopyTwo_Click(object sender, EventArgs e) => Clipboard.SetText(TextTwo.Text);
+        private void CopyThree_Click(object sender, EventArgs e)
+        {
+            if (TextThree.Text != "")
+            { Clipboard.SetText(TextThree.Text); }
+        }
 
-        private void CopyThree_Click(object sender, EventArgs e) => Clipboard.SetText(TextThree.Text);
+        private void CopyFour_Click(object sender, EventArgs e)
+        {
+            if (TextFour.Text != "")
+            { Clipboard.SetText(TextFour.Text); }
+        }
 
-        private void CopyFour_Click(object sender, EventArgs e) => Clipboard.SetText(TextFour.Text);
+        private void CopyFive_Click(object sender, EventArgs e)
+        {
+            if (TextFive.Text != "")
+            { Clipboard.SetText(TextFive.Text); }
+        }
 
-        private void CopyFive_Click(object sender, EventArgs e) => Clipboard.SetText(TextFive.Text);
+        private void CopySix_Click(object sender, EventArgs e)
+        {
+            if (TextSix.Text != "")
+            { Clipboard.SetText(TextSix.Text); }
+        }
 
-        private void CopySix_Click(object sender, EventArgs e) => Clipboard.SetText(TextSix.Text);
+        private void CopySeven_Click(object sender, EventArgs e)
+        {
+            if (TextSeven.Text != "")
+            { Clipboard.SetText(TextSeven.Text); }
+        }
 
-        private void CopySeven_Click(object sender, EventArgs e) => Clipboard.SetText(TextSeven.Text);
+        private void CopyEight_Click(object sender, EventArgs e)
+        {
+            if (TextEight.Text != "")
+            { Clipboard.SetText(TextEight.Text); }
+        }
 
-        private void CopyEight_Click(object sender, EventArgs e) => Clipboard.SetText(TextEight.Text);
+        private void CopyNine_Click(object sender, EventArgs e)
+        {
+            if (TextNine.Text != "")
+            { Clipboard.SetText(TextNine.Text); }
+        }
 
-        private void CopyNine_Click(object sender, EventArgs e) => Clipboard.SetText(TextNine.Text);
-
-        private void CopyTen_Click(object sender, EventArgs e) => Clipboard.SetText(TextTen.Text);
+        private void CopyTen_Click(object sender, EventArgs e)
+        {
+            if (TextTen.Text != "")
+            { Clipboard.SetText(TextTen.Text); }
+        }
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
