@@ -208,7 +208,7 @@
             this.NameLabel.BackColor = System.Drawing.Color.Transparent;
             this.NameLabel.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.White;
-            this.NameLabel.Location = new System.Drawing.Point(-2, 9);
+            this.NameLabel.Location = new System.Drawing.Point(12, 8);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(107, 15);
             this.NameLabel.TabIndex = 1;
@@ -322,10 +322,13 @@
             this.notifyIcon1.BalloonTipTitle = "Hello";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "t3pyRYster";
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // HideButton
             // 
+            this.HideButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.HideButton.BackColor = System.Drawing.Color.Black;
             this.HideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HideButton.ForeColor = System.Drawing.Color.White;

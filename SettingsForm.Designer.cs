@@ -32,6 +32,7 @@
             this.WhiteButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.Autorun = new System.Windows.Forms.CheckBox();
+            this.ComboFonts = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -91,7 +92,7 @@
             // 
             this.Autorun.AutoSize = true;
             this.Autorun.ForeColor = System.Drawing.Color.White;
-            this.Autorun.Location = new System.Drawing.Point(0, 137);
+            this.Autorun.Location = new System.Drawing.Point(5, 136);
             this.Autorun.Name = "Autorun";
             this.Autorun.Size = new System.Drawing.Size(143, 17);
             this.Autorun.TabIndex = 5;
@@ -99,12 +100,27 @@
             this.Autorun.UseVisualStyleBackColor = true;
             this.Autorun.CheckedChanged += new System.EventHandler(this.Autorun_CheckedChanged);
             // 
+            // ComboFonts
+            // 
+            this.ComboFonts.FormattingEnabled = true;
+            this.ComboFonts.Items.AddRange(new object[] {
+            "Arial",
+            "Calibria",
+            "Sans Serif"});
+            this.ComboFonts.Location = new System.Drawing.Point(0, 160);
+            this.ComboFonts.Name = "ComboFonts";
+            this.ComboFonts.Size = new System.Drawing.Size(199, 21);
+            this.ComboFonts.TabIndex = 6;
+            this.ComboFonts.Text = "Select font";
+            this.ComboFonts.SelectedIndexChanged += new System.EventHandler(this.ComboFonts_SelectedIndexChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(201, 157);
+            this.ClientSize = new System.Drawing.Size(201, 185);
+            this.Controls.Add(this.ComboFonts);
             this.Controls.Add(this.Autorun);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.WhiteButton);
@@ -128,6 +144,7 @@
         private System.Windows.Forms.Button WhiteButton;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.CheckBox Autorun;
+        private System.Windows.Forms.ComboBox ComboFonts;
 
         public bool CurrTheme { get; private set; }
     }

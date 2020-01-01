@@ -1,5 +1,7 @@
 ﻿using Supply;
 using System;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace T3pyRYster
@@ -14,16 +16,22 @@ namespace T3pyRYster
             #region Set Theme
             NameLabel.BackColor = SupportModule.ColorOne;
             NameLabel.ForeColor = SupportModule.ColorTwo;
+            NameLabel.Font = SupportModule.AppFont;
             BlackButton.BackColor = SupportModule.ColorOne;
             BlackButton.ForeColor = SupportModule.ColorTwo;
+            BlackButton.Font = SupportModule.AppFont;
             WhiteButton.BackColor = SupportModule.ColorTwo;
             WhiteButton.ForeColor = SupportModule.ColorOne;
+            WhiteButton.Font = SupportModule.AppFont;
             CloseButton.BackColor = SupportModule.ColorOne;
             CloseButton.ForeColor = SupportModule.ColorTwo;
+            CloseButton.Font = SupportModule.AppFont;
             ForeColor = SupportModule.ColorTwo;
             BackColor = SupportModule.ColorOne;
+            Font = SupportModule.AppFont;
             Autorun.BackColor = SupportModule.ColorOne;
             Autorun.ForeColor = SupportModule.ColorTwo;
+            Autorun.Font = SupportModule.AppFont;
             #endregion Set Theme
         }
 
@@ -41,7 +49,7 @@ namespace T3pyRYster
             SupportModule.Key.SetValue("Theme", "1");
         }
 
-        private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(sender, e, this);
+        private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(e, this);
 
         private void Autorun_CheckedChanged(object sender, EventArgs e)
         {
@@ -53,6 +61,24 @@ namespace T3pyRYster
             {
                 SupportModule.AutoRunKey.DeleteValue("T3pyRYster", false);
             }
+        }
+
+        private void ComboFonts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(ComboFonts.SelectedIndex)
+            {
+                case 0:
+                    SupportModule.fontfam = new FontFamily("Arial");
+                    break;
+                case 1:
+                    SupportModule.fontfam = new FontFamily("Calibri");
+                    break;
+                case 2:
+                    SupportModule.fontfam = new FontFamily(System.Drawing.Text.GenericFontFamilies.SansSerif);
+                    break;
+            }
+            SupportModule.Key.CreateSubKey("Font");
+            SupportModule.Key.SetValue("Font", SupportModule.fontfam.Name);
         }
     }
 }

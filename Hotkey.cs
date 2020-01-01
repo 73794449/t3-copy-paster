@@ -109,7 +109,7 @@ namespace Binder
 
             // Get an ID for the hotkey and increase current ID
             id = currentID;
-            currentID = currentID + 1 % maximumID;
+            currentID += 1 % maximumID;
 
             // Translate modifier keys into unmanaged version
             uint modifiers = (Alt ? MOD_ALT : 0) | (Control ? MOD_CONTROL : 0) |

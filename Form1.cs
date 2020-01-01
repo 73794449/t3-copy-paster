@@ -1,6 +1,7 @@
 ﻿using Binder;
 using Supply;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace T3pyRYster
@@ -71,59 +72,84 @@ namespace T3pyRYster
             SupportModule.LoadThemeThatNow();
             CloseButton.BackColor = SupportModule.ColorOne;
             CloseButton.ForeColor = SupportModule.ColorTwo;
+            CloseButton.Font = SupportModule.AppFont;
             CopyOne.BackColor = SupportModule.ColorOne;
             CopyOne.ForeColor = SupportModule.ColorTwo;
+            CopyOne.Font = SupportModule.AppFont;
             CopyTwo.BackColor = SupportModule.ColorOne;
             CopyTwo.ForeColor = SupportModule.ColorTwo;
+            CopyTwo.Font = SupportModule.AppFont;
             CopyThree.BackColor = SupportModule.ColorOne;
             CopyThree.ForeColor = SupportModule.ColorTwo;
+            CopyThree.Font = SupportModule.AppFont;
             CopyFour.BackColor = SupportModule.ColorOne;
             CopyFour.ForeColor = SupportModule.ColorTwo;
+            CopyFour.Font = SupportModule.AppFont;
             CopyFive.BackColor = SupportModule.ColorOne;
             CopyFive.ForeColor = SupportModule.ColorTwo;
+            CopyFive.Font = SupportModule.AppFont;
             CopySix.BackColor = SupportModule.ColorOne;
             CopySix.ForeColor = SupportModule.ColorTwo;
+            CopySix.Font = SupportModule.AppFont;
             CopySeven.BackColor = SupportModule.ColorOne;
             CopySeven.ForeColor = SupportModule.ColorTwo;
+            CopySeven.Font = SupportModule.AppFont;
             CopyEight.BackColor = SupportModule.ColorOne;
             CopyEight.ForeColor = SupportModule.ColorTwo;
+            CopyEight.Font = SupportModule.AppFont;
             CopyNine.ForeColor = SupportModule.ColorTwo;
             CopyNine.BackColor = SupportModule.ColorOne;
+            CopyNine.Font = SupportModule.AppFont;
             CopyTen.ForeColor = SupportModule.ColorTwo;
             CopyTen.BackColor = SupportModule.ColorOne;
+            CopyTen.Font = SupportModule.AppFont;
             NameLabel.BackColor = SupportModule.ColorOne;
             NameLabel.ForeColor = SupportModule.ColorTwo;
+            NameLabel.Font = new Font(SupportModule.fontfam, 16, FontStyle.Bold, GraphicsUnit.Pixel);
             TextOne.BackColor = SupportModule.ColorOne;
             TextOne.ForeColor = SupportModule.ColorTwo;
+            TextOne.Font = SupportModule.AppFont;
             TextTwo.BackColor = SupportModule.ColorOne;
             TextTwo.ForeColor = SupportModule.ColorTwo;
+            TextTwo.Font = SupportModule.AppFont;
             TextThree.BackColor = SupportModule.ColorOne;
             TextThree.ForeColor = SupportModule.ColorTwo;
+            TextThree.Font = SupportModule.AppFont;
             TextFour.BackColor = SupportModule.ColorOne;
             TextFour.ForeColor = SupportModule.ColorTwo;
+            TextFour.Font = TextThree.Font = SupportModule.AppFont;
             TextFive.BackColor = SupportModule.ColorOne;
             TextFive.ForeColor = SupportModule.ColorTwo;
+            TextFive.Font = TextThree.Font = SupportModule.AppFont;
             TextSix.BackColor = SupportModule.ColorOne;
             TextSix.ForeColor = SupportModule.ColorTwo;
+            TextSix.Font = TextThree.Font = SupportModule.AppFont;
             TextSeven.BackColor = SupportModule.ColorOne;
             TextSeven.ForeColor = SupportModule.ColorTwo;
+            TextSeven.Font = TextThree.Font = SupportModule.AppFont;
             TextEight.BackColor = SupportModule.ColorOne;
             TextEight.ForeColor = SupportModule.ColorTwo;
+            TextEight.Font = TextThree.Font = SupportModule.AppFont;
             TextNine.BackColor = SupportModule.ColorOne;
             TextNine.ForeColor = SupportModule.ColorTwo;
+            TextNine.Font = TextThree.Font = SupportModule.AppFont;
             TextTen.BackColor = SupportModule.ColorOne;
             TextTen.ForeColor = SupportModule.ColorTwo;
+            TextTen.Font = SupportModule.AppFont;
             HideButton.BackColor = SupportModule.ColorOne;
             HideButton.ForeColor = SupportModule.ColorTwo;
+            HideButton.Font = SupportModule.AppFont;
             SettingsButton.BackColor = SupportModule.ColorOne;
             SettingsButton.ForeColor = SupportModule.ColorTwo;
+            SettingsButton.Font = SupportModule.AppFont;
             BackColor = SupportModule.ColorOne;
             ForeColor = SupportModule.ColorTwo;
+            Font = SupportModule.AppFont;
 
             #endregion Theme
         }
 
-        private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(sender, e, this);
+        private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(e, this);
 
         private void CloseButton_Click(object sender, EventArgs e) => Close();
 
@@ -139,7 +165,7 @@ namespace T3pyRYster
             settingsForm.Show();
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             notifyIcon1.Visible = false;
             Show();

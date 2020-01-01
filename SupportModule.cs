@@ -17,7 +17,7 @@ namespace Supply
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public static void MoveForm(object sender, MouseEventArgs e, Form form)
+        public static void MoveForm(MouseEventArgs e, Form form)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -32,9 +32,20 @@ namespace Supply
         public static RegistryKey AutoRunKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public static Color ColorOne;
         public static Color ColorTwo;
+        public static FontFamily fontfam;
+        public static Font AppFont;
 
         public static void LoadThemeThatNow()
         {
+            if (Key.GetValue("Font") != null)
+            {
+                fontfam = new FontFamily(Key.GetValue("Font").ToString());
+            }
+            else
+            {
+                fontfam = new FontFamily("Arial");
+            }
+            AppFont = new Font(fontfam, 12, FontStyle.Regular, GraphicsUnit.Pixel);
             if (Key.GetValue("Theme") == null)
             {
                 Key.CreateSubKey("Theme");
