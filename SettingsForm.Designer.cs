@@ -31,6 +31,7 @@
             this.BlackButton = new System.Windows.Forms.Button();
             this.WhiteButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.Autorun = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -86,12 +87,25 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // Autorun
+            // 
+            this.Autorun.AutoSize = true;
+            this.Autorun.ForeColor = System.Drawing.Color.White;
+            this.Autorun.Location = new System.Drawing.Point(0, 137);
+            this.Autorun.Name = "Autorun";
+            this.Autorun.Size = new System.Drawing.Size(143, 17);
+            this.Autorun.TabIndex = 5;
+            this.Autorun.Text = "Run on Windows startup";
+            this.Autorun.UseVisualStyleBackColor = true;
+            this.Autorun.CheckedChanged += new System.EventHandler(this.Autorun_CheckedChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(201, 130);
+            this.ClientSize = new System.Drawing.Size(201, 157);
+            this.Controls.Add(this.Autorun);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.WhiteButton);
             this.Controls.Add(this.BlackButton);
@@ -113,6 +127,7 @@
         private System.Windows.Forms.Button BlackButton;
         private System.Windows.Forms.Button WhiteButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.CheckBox Autorun;
 
         public bool CurrTheme { get; private set; }
     }

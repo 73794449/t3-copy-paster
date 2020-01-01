@@ -29,6 +29,7 @@ namespace Supply
         #endregion MoveForm
 
         public static RegistryKey Key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\T3Settings\T3pyRyster");
+        public static RegistryKey AutoRunKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public static Color ColorOne;
         public static Color ColorTwo;
 

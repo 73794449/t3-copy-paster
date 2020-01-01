@@ -9,9 +9,9 @@ namespace T3pyRYster
         public SettingsForm()
         {
             InitializeComponent();
-
+            if(SupportModule.AutoRunKey.GetValue("T3pyRYster").ToString() == Application.ExecutablePath) { Autorun.Checked = true; }
+            else { Autorun.Checked = false; }
             #region Set Theme
-
             NameLabel.BackColor = SupportModule.ColorOne;
             NameLabel.ForeColor = SupportModule.ColorTwo;
             BlackButton.BackColor = SupportModule.ColorOne;
@@ -22,7 +22,8 @@ namespace T3pyRYster
             CloseButton.ForeColor = SupportModule.ColorTwo;
             ForeColor = SupportModule.ColorTwo;
             BackColor = SupportModule.ColorOne;
-
+            Autorun.BackColor = SupportModule.ColorOne;
+            Autorun.ForeColor = SupportModule.ColorTwo;
             #endregion Set Theme
         }
 
@@ -41,5 +42,17 @@ namespace T3pyRYster
         }
 
         private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(sender, e, this);
+
+        private void Autorun_CheckedChanged(object sender, EventArgs e)
+        {
+            if(Autorun.Checked)
+            {
+                SupportModule.AutoRunKey.SetValue("T3pyRYster", Application.ExecutablePath);
+            }
+            else
+            {
+                SupportModule.AutoRunKey.DeleteValue("T3pyRYster", false);
+            }
+        }
     }
 }
