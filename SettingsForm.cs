@@ -1,6 +1,5 @@
 ﻿using Supply;
 using System;
-using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,7 +10,8 @@ namespace T3pyRYster
         public SettingsForm()
         {
             InitializeComponent();
-            if(SupportModule.AutoRunKey.GetValue("T3pyRYster").ToString() == Application.ExecutablePath) { Autorun.Checked = true; }
+            if (SupportModule.AutoRunKey.GetValue("T3pyRYster") != null && SupportModule.AutoRunKey.GetValue("T3pyRYster").ToString() == Application.ExecutablePath) 
+            { Autorun.Checked = true; }
             else { Autorun.Checked = false; }
             #region Set Theme
             NameLabel.BackColor = SupportModule.ColorOne;
@@ -32,6 +32,9 @@ namespace T3pyRYster
             Autorun.BackColor = SupportModule.ColorOne;
             Autorun.ForeColor = SupportModule.ColorTwo;
             Autorun.Font = SupportModule.AppFont;
+            ComboFonts.BackColor = SupportModule.ColorOne;
+            ComboFonts.ForeColor = SupportModule.ColorTwo;
+            ComboFonts.Font = SupportModule.AppFont;
             #endregion Set Theme
         }
 
@@ -53,7 +56,7 @@ namespace T3pyRYster
 
         private void Autorun_CheckedChanged(object sender, EventArgs e)
         {
-            if(Autorun.Checked)
+            if (Autorun.Checked)
             {
                 SupportModule.AutoRunKey.SetValue("T3pyRYster", Application.ExecutablePath);
             }
@@ -65,7 +68,7 @@ namespace T3pyRYster
 
         private void ComboFonts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(ComboFonts.SelectedIndex)
+            switch (ComboFonts.SelectedIndex)
             {
                 case 0:
                     SupportModule.fontfam = new FontFamily("Arial");
@@ -80,5 +83,7 @@ namespace T3pyRYster
             SupportModule.Key.CreateSubKey("Font");
             SupportModule.Key.SetValue("Font", SupportModule.fontfam.Name);
         }
+
+        private void AnimateName(object sender, EventArgs e) => NameLabel.ForeColor = SupportModule.ColorTwo;
     }
 }

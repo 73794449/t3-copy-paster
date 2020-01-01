@@ -45,7 +45,7 @@ namespace Supply
             {
                 fontfam = new FontFamily("Arial");
             }
-            AppFont = new Font(fontfam, 12, FontStyle.Regular, GraphicsUnit.Pixel);
+            AppFont = new Font(fontfam, 14, FontStyle.Regular, GraphicsUnit.Pixel);
             if (Key.GetValue("Theme") == null)
             {
                 Key.CreateSubKey("Theme");

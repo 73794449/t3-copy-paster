@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.NameLabel = new System.Windows.Forms.Label();
             this.BlackButton = new System.Windows.Forms.Button();
             this.WhiteButton = new System.Windows.Forms.Button();
@@ -41,12 +42,13 @@
             this.NameLabel.BackColor = System.Drawing.Color.Transparent;
             this.NameLabel.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.White;
-            this.NameLabel.Location = new System.Drawing.Point(2, 9);
+            this.NameLabel.Location = new System.Drawing.Point(2, 8);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(107, 15);
+            this.NameLabel.Size = new System.Drawing.Size(87, 15);
             this.NameLabel.TabIndex = 2;
-            this.NameLabel.Text = "T3pyRYster";
+            this.NameLabel.Text = "Settings";
             this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveMe);
+            this.NameLabel.MouseHover += new System.EventHandler(this.AnimateName);
             // 
             // BlackButton
             // 
@@ -78,26 +80,29 @@
             // 
             // CloseButton
             // 
+            this.CloseButton.BackgroundImage = global::T3pyRYster.Properties.Resources.CloseIcon;
+            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(169, 0);
+            this.CloseButton.Location = new System.Drawing.Point(170, 0);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(30, 30);
             this.CloseButton.TabIndex = 4;
-            this.CloseButton.Text = "X";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // Autorun
             // 
             this.Autorun.AutoSize = true;
+            this.Autorun.BackColor = System.Drawing.Color.Black;
+            this.Autorun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Autorun.ForeColor = System.Drawing.Color.White;
-            this.Autorun.Location = new System.Drawing.Point(5, 136);
+            this.Autorun.Location = new System.Drawing.Point(10, 130);
             this.Autorun.Name = "Autorun";
-            this.Autorun.Size = new System.Drawing.Size(143, 17);
+            this.Autorun.Size = new System.Drawing.Size(140, 17);
             this.Autorun.TabIndex = 5;
             this.Autorun.Text = "Run on Windows startup";
-            this.Autorun.UseVisualStyleBackColor = true;
+            this.Autorun.UseVisualStyleBackColor = false;
             this.Autorun.CheckedChanged += new System.EventHandler(this.Autorun_CheckedChanged);
             // 
             // ComboFonts
@@ -107,28 +112,28 @@
             "Arial",
             "Calibria",
             "Sans Serif"});
-            this.ComboFonts.Location = new System.Drawing.Point(0, 160);
+            this.ComboFonts.Location = new System.Drawing.Point(0, 153);
             this.ComboFonts.Name = "ComboFonts";
-            this.ComboFonts.Size = new System.Drawing.Size(199, 21);
+            this.ComboFonts.Size = new System.Drawing.Size(200, 21);
             this.ComboFonts.TabIndex = 6;
             this.ComboFonts.Text = "Select font";
             this.ComboFonts.SelectedIndexChanged += new System.EventHandler(this.ComboFonts_SelectedIndexChanged);
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(201, 185);
+            this.ClientSize = new System.Drawing.Size(201, 176);
             this.Controls.Add(this.ComboFonts);
             this.Controls.Add(this.Autorun);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.WhiteButton);
             this.Controls.Add(this.BlackButton);
             this.Controls.Add(this.NameLabel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
-            this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsForm";
             this.TopMost = true;

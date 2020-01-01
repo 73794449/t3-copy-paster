@@ -214,5 +214,7 @@ namespace T3pyRYster
         private void CopyTen_Click(object sender, EventArgs e) => SupportModule.CopyMe(TextTen);
 
         #endregion CopyPasterMain
+
+        private void AnimateName(object sender, EventArgs e) => NameLabel.ForeColor = SupportModule.ColorTwo;
     }
 }
