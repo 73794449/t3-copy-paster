@@ -46,7 +46,7 @@
             this.NameLabel.Size = new System.Drawing.Size(107, 15);
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "T3pyRYster";
-            this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveMe);
             // 
             // BlackButton
             // 

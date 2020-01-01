@@ -11,8 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        System.Drawing.Color black;
-        System.Drawing.Color white;
         protected override void Dispose(bool disposing)
         {
 
@@ -60,10 +58,9 @@
             this.HideButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-
             // 
             // CloseButton
-            //
+            // 
             this.CloseButton.BackColor = System.Drawing.Color.Black;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.ForeColor = System.Drawing.Color.White;
@@ -216,7 +213,7 @@
             this.NameLabel.Size = new System.Drawing.Size(107, 15);
             this.NameLabel.TabIndex = 1;
             this.NameLabel.Text = "T3pyRYster";
-            this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveMe);
             // 
             // TextOne
             // 
