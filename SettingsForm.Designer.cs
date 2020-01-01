@@ -19,8 +19,6 @@
             }
             base.Dispose(disposing);
         }
-        System.Drawing.Color black;
-        System.Drawing.Color white;
         #region Windows Form Designer generated code
 
         /// <summary>
