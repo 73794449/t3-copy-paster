@@ -91,20 +91,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CloseIcon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HideIcon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MainIcon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SettingsIcon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CopyIcon.bmp" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -51,7 +51,6 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.BackgroundImage = global::T3pyRYster.Properties.Resources.CloseIcon;
             this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.ForeColor = System.Drawing.Color.White;
@@ -59,6 +58,7 @@
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(30, 30);
             this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "X";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 

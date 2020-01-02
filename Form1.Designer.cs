@@ -183,7 +183,6 @@
             // CopyTen
             // 
             this.CopyTen.BackColor = System.Drawing.Color.Black;
-            this.CopyTen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyTen.BackgroundImage")));
             this.CopyTen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyTen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyTen.ForeColor = System.Drawing.Color.White;
@@ -191,13 +190,13 @@
             this.CopyTen.Name = "CopyTen";
             this.CopyTen.Size = new System.Drawing.Size(30, 30);
             this.CopyTen.TabIndex = 0;
+            this.CopyTen.Text = "C";
             this.CopyTen.UseVisualStyleBackColor = false;
             this.CopyTen.Click += new System.EventHandler(this.CopyTen_Click);
             // 
             // CopySeven
             // 
             this.CopySeven.BackColor = System.Drawing.Color.Black;
-            this.CopySeven.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopySeven.BackgroundImage")));
             this.CopySeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopySeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopySeven.ForeColor = System.Drawing.Color.White;
@@ -205,13 +204,13 @@
             this.CopySeven.Name = "CopySeven";
             this.CopySeven.Size = new System.Drawing.Size(30, 30);
             this.CopySeven.TabIndex = 0;
+            this.CopySeven.Text = "C";
             this.CopySeven.UseVisualStyleBackColor = false;
             this.CopySeven.Click += new System.EventHandler(this.CopySeven_Click);
             // 
             // CopyNine
             // 
             this.CopyNine.BackColor = System.Drawing.Color.Black;
-            this.CopyNine.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyNine.BackgroundImage")));
             this.CopyNine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyNine.ForeColor = System.Drawing.Color.White;
@@ -219,13 +218,13 @@
             this.CopyNine.Name = "CopyNine";
             this.CopyNine.Size = new System.Drawing.Size(30, 30);
             this.CopyNine.TabIndex = 0;
+            this.CopyNine.Text = "C";
             this.CopyNine.UseVisualStyleBackColor = false;
             this.CopyNine.Click += new System.EventHandler(this.CopyNine_Click);
             // 
             // CopySix
             // 
             this.CopySix.BackColor = System.Drawing.Color.Black;
-            this.CopySix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopySix.BackgroundImage")));
             this.CopySix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopySix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopySix.ForeColor = System.Drawing.Color.White;
@@ -233,13 +232,13 @@
             this.CopySix.Name = "CopySix";
             this.CopySix.Size = new System.Drawing.Size(30, 30);
             this.CopySix.TabIndex = 0;
+            this.CopySix.Text = "C";
             this.CopySix.UseVisualStyleBackColor = false;
             this.CopySix.Click += new System.EventHandler(this.CopySix_Click);
             // 
             // CopyEight
             // 
             this.CopyEight.BackColor = System.Drawing.Color.Black;
-            this.CopyEight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyEight.BackgroundImage")));
             this.CopyEight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyEight.ForeColor = System.Drawing.Color.White;
@@ -247,13 +246,13 @@
             this.CopyEight.Name = "CopyEight";
             this.CopyEight.Size = new System.Drawing.Size(30, 30);
             this.CopyEight.TabIndex = 0;
+            this.CopyEight.Text = "C";
             this.CopyEight.UseVisualStyleBackColor = false;
             this.CopyEight.Click += new System.EventHandler(this.CopyEight_Click);
             // 
             // CopyThree
             // 
             this.CopyThree.BackColor = System.Drawing.Color.Black;
-            this.CopyThree.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyThree.BackgroundImage")));
             this.CopyThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyThree.ForeColor = System.Drawing.Color.White;
@@ -261,13 +260,13 @@
             this.CopyThree.Name = "CopyThree";
             this.CopyThree.Size = new System.Drawing.Size(30, 30);
             this.CopyThree.TabIndex = 0;
+            this.CopyThree.Text = "C";
             this.CopyThree.UseVisualStyleBackColor = false;
             this.CopyThree.Click += new System.EventHandler(this.CopyThree_Click);
             // 
             // CopyFive
             // 
             this.CopyFive.BackColor = System.Drawing.Color.Black;
-            this.CopyFive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyFive.BackgroundImage")));
             this.CopyFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyFive.ForeColor = System.Drawing.Color.White;
@@ -275,13 +274,13 @@
             this.CopyFive.Name = "CopyFive";
             this.CopyFive.Size = new System.Drawing.Size(30, 30);
             this.CopyFive.TabIndex = 0;
+            this.CopyFive.Text = "C";
             this.CopyFive.UseVisualStyleBackColor = false;
             this.CopyFive.Click += new System.EventHandler(this.CopyFive_Click);
             // 
             // CopyTwo
             // 
             this.CopyTwo.BackColor = System.Drawing.Color.Black;
-            this.CopyTwo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyTwo.BackgroundImage")));
             this.CopyTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyTwo.ForeColor = System.Drawing.Color.White;
@@ -289,13 +288,13 @@
             this.CopyTwo.Name = "CopyTwo";
             this.CopyTwo.Size = new System.Drawing.Size(30, 30);
             this.CopyTwo.TabIndex = 0;
+            this.CopyTwo.Text = "C";
             this.CopyTwo.UseVisualStyleBackColor = false;
             this.CopyTwo.Click += new System.EventHandler(this.CopyTwo_Click);
             // 
             // CopyFour
             // 
             this.CopyFour.BackColor = System.Drawing.Color.Black;
-            this.CopyFour.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyFour.BackgroundImage")));
             this.CopyFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyFour.ForeColor = System.Drawing.Color.White;
@@ -303,13 +302,13 @@
             this.CopyFour.Name = "CopyFour";
             this.CopyFour.Size = new System.Drawing.Size(30, 30);
             this.CopyFour.TabIndex = 0;
+            this.CopyFour.Text = "C";
             this.CopyFour.UseVisualStyleBackColor = false;
             this.CopyFour.Click += new System.EventHandler(this.CopyFour_Click);
             // 
             // CopyOne
             // 
             this.CopyOne.BackColor = System.Drawing.Color.Black;
-            this.CopyOne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CopyOne.BackgroundImage")));
             this.CopyOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyOne.ForeColor = System.Drawing.Color.White;
@@ -317,13 +316,13 @@
             this.CopyOne.Name = "CopyOne";
             this.CopyOne.Size = new System.Drawing.Size(30, 30);
             this.CopyOne.TabIndex = 0;
+            this.CopyOne.Text = "C";
             this.CopyOne.UseVisualStyleBackColor = false;
             this.CopyOne.Click += new System.EventHandler(this.CopyOne_Click);
             // 
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.Black;
-            this.SettingsButton.BackgroundImage = global::T3pyRYster.Properties.Resources.SettingsIcon;
             this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
@@ -331,6 +330,7 @@
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(30, 30);
             this.SettingsButton.TabIndex = 0;
+            this.SettingsButton.Text = "S";
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
@@ -340,7 +340,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HideButton.BackColor = System.Drawing.Color.Black;
-            this.HideButton.BackgroundImage = global::T3pyRYster.Properties.Resources.HideIcon;
             this.HideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HideButton.ForeColor = System.Drawing.Color.White;
@@ -348,13 +347,13 @@
             this.HideButton.Name = "HideButton";
             this.HideButton.Size = new System.Drawing.Size(30, 30);
             this.HideButton.TabIndex = 0;
+            this.HideButton.Text = "—";
             this.HideButton.UseVisualStyleBackColor = false;
             this.HideButton.Click += new System.EventHandler(this.Hide_Click);
             // 
             // CloseButton
             // 
             this.CloseButton.BackColor = System.Drawing.Color.Black;
-            this.CloseButton.BackgroundImage = global::T3pyRYster.Properties.Resources.CloseIcon;
             this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.ForeColor = System.Drawing.Color.White;
@@ -362,6 +361,7 @@
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(30, 30);
             this.CloseButton.TabIndex = 0;
+            this.CloseButton.Text = "X";
             this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
