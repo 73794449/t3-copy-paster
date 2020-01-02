@@ -32,81 +32,177 @@ namespace Supply
         public static RegistryKey AutoRunKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public static Color ColorOne;
         public static Color ColorTwo;
-        public static FontFamily fontfam;
+        public static FontFamily FontFam;
         public static Font AppFont;
-
-        public static void LoadThemeThatNow()
+        public static string FileName;
+        public const string TXT = ".txt";
+        public static int NumOfStrokes;
+        public static bool NewFile = false;
+        //Black - 0
+        //Gray - 1
+        //White - 2
+        //Yellow - 3
+        //Orange - 4
+        //Red - 5
+        //Green - 6
+        //Blue - 7
+        //Pink - 8
+        //Violet - 9
+        public static void UpdateTheme()
         {
-            if (Key.GetValue("Font") != null)
+            switch (Key.GetValue("ColorOne"))
             {
-                fontfam = new FontFamily(Key.GetValue("Font").ToString());
+                case 0:
+                    ColorOne = Color.Black;
+                    break;
+                case 1:
+                    ColorOne = Color.Gray;
+                    break;
+                case 2:
+                    ColorOne = Color.White;
+                    break;
+                case 3:
+                    ColorOne = Color.Yellow;
+                    break;
+                case 4:
+                    ColorOne = Color.Orange;
+                    break;
+                case 5:
+                    ColorOne = Color.Red;
+                    break;
+                case 6:
+                    ColorOne = Color.Green;
+                    break;
+                case 7:
+                    ColorOne = Color.Blue;
+                    break;
+                case 8:
+                    ColorOne = Color.Pink;
+                    break;
+                case 9:
+                    ColorOne = Color.Violet;
+                    break;
+                case null:
+                    break;
             }
-            else
+            switch (Key.GetValue("ColorTwo"))
             {
-                fontfam = new FontFamily("Arial");
+                case 0:
+                    ColorTwo = Color.Black;
+                    break;
+                case 1:
+                    ColorTwo = Color.Gray;
+                    break;
+                case 2:
+                    ColorTwo = Color.White;
+                    break;
+                case 3:
+                    ColorTwo = Color.Yellow;
+                    break;
+                case 4:
+                    ColorTwo = Color.Orange;
+                    break;
+                case 5:
+                    ColorTwo = Color.Red;
+                    break;
+                case 6:
+                    ColorTwo = Color.Green;
+                    break;
+                case 7:
+                    ColorTwo = Color.Blue;
+                    break;
+                case 8:
+                    ColorTwo = Color.Pink;
+                    break;
+                case 9:
+                    ColorTwo = Color.Violet;
+                    break;
+                case null:
+                    break;
             }
-            AppFont = new Font(fontfam, 14, FontStyle.Regular, GraphicsUnit.Pixel);
-            if (Key.GetValue("Theme") == null)
+            switch (Key.GetValue("Font"))
             {
-                Key.CreateSubKey("Theme");
-                Key.SetValue("Theme", "0");
+                case 0:
+                    FontFam = new FontFamily("Arial");
+                    break;
+                case 1:
+                    FontFam = new FontFamily("Calibri");
+                    break;
+                case 2:
+                    FontFam = new FontFamily(System.Drawing.Text.GenericFontFamilies.SansSerif);
+                    break;
+                case null:
+                    break;
             }
-            if (Key.GetValue("Theme").ToString() == "0")
+            AppFont = new Font(FontFam, 12, FontStyle.Regular, GraphicsUnit.Pixel);
+            FileName = Key.GetValue("FileName").ToString();
+            NumOfStrokes = (Int32)Key.GetValue("NumOfStrokes");
+        }
+        public static void CheckOnMiss()
+        {
+            if (Key.GetValue("ColorOne") == null)
             {
-                ColorOne = Color.Black;
-                ColorTwo = Color.White;
+                Key.CreateSubKey("ColorOne");
+                Key.SetValue("ColorOne", 0);
             }
-            else
+            if (Key.GetValue("ColorTwo") == null)
             {
-                ColorOne = Color.White;
-                ColorTwo = Color.Black;
+                Key.CreateSubKey("ColorTwo");
+                Key.SetValue("ColorTwo", 2);
+            }
+            if (Key.GetValue("Font") == null)
+            {
+                Key.CreateSubKey("Font");
+                Key.SetValue("Font", 0);
+            }
+            if (Key.GetValue("datahere") == null)
+            {
+                Key.CreateSubKey("datahere");
+                Key.SetValue("datahere", "data\\");
+            }
+            if (Key.GetValue("FileName") == null)
+            {
+                Key.CreateSubKey("FileName");
+                Key.SetValue("FileName", "File");
+            }
+            if (Key.GetValue("NumOfStrokes") == null)
+            {
+                Key.CreateSubKey("NumOfStrokes");
+                Key.SetValue("NumOfStrokes", 10);
+            }
+            if (!Directory.Exists(Key.GetValue("datahere").ToString()))
+            {
+                Directory.CreateDirectory(Key.GetValue("datahere").ToString());
+            }
+            for (int i = 0; i < (Int32)Key.GetValue("NumOfStrokes"); i++)
+            {
+                if (!File.Exists(Key.GetValue("datahere").ToString() + Key.GetValue("FileName").ToString() + i.ToString() + TXT))
+                {
+                    File.Create(Key.GetValue("datahere").ToString() + Key.GetValue("FileName").ToString() + i.ToString() + TXT);
+                }
             }
         }
-
         public static void CopyMe(TextBox textBox)
         {
             if (textBox.Text != "")
             { Clipboard.SetText(textBox.Text); }
         }
-
-        public static object Load()
-        {
-            string Data = "datahere";
-            string SettingsNow = "data\\SettingsNow";
-            string TXT = ".txt";
-            if (Key.GetValue(Data) == null)
-            {
-                Key.CreateSubKey(Data);
-                for (int i = 1; i < 11; i++)
-                {
-                    if (!File.Exists(SettingsNow + i.ToString() + TXT))
-                    {
-                        Directory.CreateDirectory("data");
-                        File.CreateText(SettingsNow + i.ToString() + TXT);
-                    }
-                }
-                Key.SetValue(Data, SettingsNow);
-            }
-            return Key.GetValue(Data);
-        }
-
         public static string GetValue(int id)
         {
-            if (id == 0 || id > 10)
+            if (id < NumOfStrokes && id >= 0)
             {
-                return null;
+                return File.ReadAllText(Key.GetValue("datahere").ToString() + Key.GetValue("FileName").ToString() + id + TXT);
             }
             else
             {
-                return File.ReadAllText(Load().ToString() + id.ToString() + ".txt");
+                return null;
             }
         }
-
         public static void SetValue(int id, string value)
         {
-            if (id != 0 && id <= 10)
+            if (id < NumOfStrokes && id >= 0)
             {
-                File.WriteAllText(Load().ToString() + id.ToString() + ".txt", value);
+                File.WriteAllText(Key.GetValue("datahere").ToString() + Key.GetValue("FileName").ToString() + id + TXT, value);
             }
         }
     }

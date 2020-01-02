@@ -1,6 +1,5 @@
 ﻿using Supply;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace T3pyRYster
@@ -10,19 +9,21 @@ namespace T3pyRYster
         public SettingsForm()
         {
             InitializeComponent();
-            if (SupportModule.AutoRunKey.GetValue("T3pyRYster") != null && SupportModule.AutoRunKey.GetValue("T3pyRYster").ToString() == Application.ExecutablePath) 
+            #region AutoRun
+            if (SupportModule.AutoRunKey.GetValue("T3pyRYster") != null && SupportModule.AutoRunKey.GetValue("T3pyRYster").ToString() == Application.ExecutablePath)
             { Autorun.Checked = true; }
             else { Autorun.Checked = false; }
+            #endregion AutoRun
             #region Set Theme
             NameLabel.BackColor = SupportModule.ColorOne;
             NameLabel.ForeColor = SupportModule.ColorTwo;
             NameLabel.Font = SupportModule.AppFont;
-            BlackButton.BackColor = SupportModule.ColorOne;
-            BlackButton.ForeColor = SupportModule.ColorTwo;
-            BlackButton.Font = SupportModule.AppFont;
-            WhiteButton.BackColor = SupportModule.ColorTwo;
-            WhiteButton.ForeColor = SupportModule.ColorOne;
-            WhiteButton.Font = SupportModule.AppFont;
+            ComboColorOne.BackColor = SupportModule.ColorOne;
+            ComboColorOne.ForeColor = SupportModule.ColorTwo;
+            ComboColorOne.Font = SupportModule.AppFont;
+            ComboColorTwo.BackColor = SupportModule.ColorOne;
+            ComboColorTwo.ForeColor = SupportModule.ColorTwo;
+            ComboColorTwo.Font = SupportModule.AppFont;
             CloseButton.BackColor = SupportModule.ColorOne;
             CloseButton.ForeColor = SupportModule.ColorTwo;
             CloseButton.Font = SupportModule.AppFont;
@@ -39,21 +40,7 @@ namespace T3pyRYster
         }
 
         private void CloseButton_Click(object sender, EventArgs e) => Close();
-
-        private void BlackButton_Click(object sender, EventArgs e)
-        {
-            SupportModule.Key.CreateSubKey("Theme");
-            SupportModule.Key.SetValue("Theme", "0");
-        }
-
-        private void WhiteButton_Click(object sender, EventArgs e)
-        {
-            SupportModule.Key.CreateSubKey("Theme");
-            SupportModule.Key.SetValue("Theme", "1");
-        }
-
         private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(e, this);
-
         private void Autorun_CheckedChanged(object sender, EventArgs e)
         {
             if (Autorun.Checked)
@@ -65,25 +52,8 @@ namespace T3pyRYster
                 SupportModule.AutoRunKey.DeleteValue("T3pyRYster", false);
             }
         }
-
-        private void ComboFonts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (ComboFonts.SelectedIndex)
-            {
-                case 0:
-                    SupportModule.fontfam = new FontFamily("Arial");
-                    break;
-                case 1:
-                    SupportModule.fontfam = new FontFamily("Calibri");
-                    break;
-                case 2:
-                    SupportModule.fontfam = new FontFamily(System.Drawing.Text.GenericFontFamilies.SansSerif);
-                    break;
-            }
-            SupportModule.Key.CreateSubKey("Font");
-            SupportModule.Key.SetValue("Font", SupportModule.fontfam.Name);
-        }
-
-        private void AnimateName(object sender, EventArgs e) => NameLabel.ForeColor = SupportModule.ColorTwo;
+        private void ComboFonts_SelectedIndexChanged(object sender, EventArgs e) => SupportModule.Key.SetValue("Font", (Int32)ComboFonts.SelectedIndex, Microsoft.Win32.RegistryValueKind.DWord);
+        private void ComboColorOne_SelectedIndexChanged(object sender, EventArgs e) => SupportModule.Key.SetValue("ColorOne", (Int32)ComboColorOne.SelectedIndex, Microsoft.Win32.RegistryValueKind.DWord);
+        private void ComboColorTwo_SelectedIndexChanged(object sender, EventArgs e) => SupportModule.Key.SetValue("ColorTwo", (Int32)ComboColorTwo.SelectedIndex, Microsoft.Win32.RegistryValueKind.DWord);
     }
 }

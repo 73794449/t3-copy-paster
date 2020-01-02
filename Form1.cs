@@ -27,6 +27,8 @@ namespace T3pyRYster
         {
             InitializeComponent();
 
+            SupportModule.CheckOnMiss();
+            SupportModule.UpdateTheme();
             #region SetValuesAfterRestart
 
             TextOne.Text = SupportModule.GetValue(1);
@@ -68,8 +70,6 @@ namespace T3pyRYster
             #endregion Bind hotkeys
 
             #region Theme
-
-            SupportModule.LoadThemeThatNow();
             CloseButton.BackColor = SupportModule.ColorOne;
             CloseButton.ForeColor = SupportModule.ColorTwo;
             CloseButton.Font = SupportModule.AppFont;
@@ -105,7 +105,7 @@ namespace T3pyRYster
             CopyTen.Font = SupportModule.AppFont;
             NameLabel.BackColor = SupportModule.ColorOne;
             NameLabel.ForeColor = SupportModule.ColorTwo;
-            NameLabel.Font = new Font(SupportModule.fontfam, 16, FontStyle.Bold, GraphicsUnit.Pixel);
+            NameLabel.Font = new Font(SupportModule.FontFam, 16, FontStyle.Bold, GraphicsUnit.Pixel);
             TextOne.BackColor = SupportModule.ColorOne;
             TextOne.ForeColor = SupportModule.ColorTwo;
             TextOne.Font = SupportModule.AppFont;
@@ -215,6 +215,5 @@ namespace T3pyRYster
 
         #endregion CopyPasterMain
 
-        private void AnimateName(object sender, EventArgs e) => NameLabel.ForeColor = SupportModule.ColorTwo;
     }
 }

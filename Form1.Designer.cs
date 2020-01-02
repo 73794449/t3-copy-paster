@@ -70,7 +70,6 @@
             this.NameLabel.TabIndex = 1;
             this.NameLabel.Text = "T3pyRYster";
             this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveMe);
-            this.NameLabel.MouseHover += new System.EventHandler(this.AnimateName);
             // 
             // TextOne
             // 
