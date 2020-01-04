@@ -9,18 +9,8 @@ namespace T3pyRYster
     public partial class Form1 : Form
     {
         #region BindHotkeys
-
-        private readonly Hotkey hkF1 = new Hotkey(Keys.F1, false, true, false, false);
-        private readonly Hotkey hkF2 = new Hotkey(Keys.F2, false, true, false, false);
-        private readonly Hotkey hkF3 = new Hotkey(Keys.F3, false, true, false, false);
-        private readonly Hotkey hkF4 = new Hotkey(Keys.F4, false, true, false, false);
-        private readonly Hotkey hkF5 = new Hotkey(Keys.F5, false, true, false, false);
-        private readonly Hotkey hkF6 = new Hotkey(Keys.F6, false, true, false, false);
-        private readonly Hotkey hkF7 = new Hotkey(Keys.F7, false, true, false, false);
-        private readonly Hotkey hkF8 = new Hotkey(Keys.F8, false, true, false, false);
-        private readonly Hotkey hkF9 = new Hotkey(Keys.F9, false, true, false, false);
-        private readonly Hotkey hkF10 = new Hotkey(Keys.F10, false, true, false, false);
-
+        // new Hotkey(Keys., false, true, false, false)
+        private readonly Hotkey hkF1, hkF2, hkF3, hkF4, hkF5, hkF6, hkF7, hkF8, hkF9, hkF10;
         #endregion BindHotkeys
 
         public Form1()
@@ -45,6 +35,18 @@ namespace T3pyRYster
             #endregion SetValuesAfterRestart
 
             #region Bind hotkeys
+            SupportModule.UpdateHotkeys();
+
+            hkF1 = new Hotkey(Keys.F1, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF2 = new Hotkey(Keys.F2, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF3 = new Hotkey(Keys.F3, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF4 = new Hotkey(Keys.F4, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF5 = new Hotkey(Keys.F5, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF6 = new Hotkey(Keys.F6, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF7 = new Hotkey(Keys.F7, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF8 = new Hotkey(Keys.F8, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF9 = new Hotkey(Keys.F9, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF10 = new Hotkey(Keys.F10, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
 
             hkF1.Pressed += delegate { SupportModule.CopyMe(TextOne); SendKeys.Send("^{v}"); };
             hkF1.Register(this);

@@ -34,6 +34,9 @@
             this.ComboFonts = new System.Windows.Forms.ComboBox();
             this.ComboColorOne = new System.Windows.Forms.ComboBox();
             this.ComboColorTwo = new System.Windows.Forms.ComboBox();
+            this.CheckShift = new System.Windows.Forms.CheckBox();
+            this.CheckCtrl = new System.Windows.Forms.CheckBox();
+            this.CheckAlt = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -132,14 +135,59 @@
             this.ComboColorTwo.Text = "Select second color";
             this.ComboColorTwo.SelectedIndexChanged += new System.EventHandler(this.ComboColorTwo_SelectedIndexChanged);
             // 
+            // CheckShift
+            // 
+            this.CheckShift.AutoSize = true;
+            this.CheckShift.BackColor = System.Drawing.Color.Black;
+            this.CheckShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckShift.ForeColor = System.Drawing.Color.White;
+            this.CheckShift.Location = new System.Drawing.Point(5, 122);
+            this.CheckShift.Name = "CheckShift";
+            this.CheckShift.Size = new System.Drawing.Size(68, 17);
+            this.CheckShift.TabIndex = 5;
+            this.CheckShift.Text = "Bind Shift";
+            this.CheckShift.UseVisualStyleBackColor = false;
+            this.CheckShift.CheckedChanged += new System.EventHandler(this.CheckShift_CheckedChanged);
+            // 
+            // CheckCtrl
+            // 
+            this.CheckCtrl.AutoSize = true;
+            this.CheckCtrl.BackColor = System.Drawing.Color.Black;
+            this.CheckCtrl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckCtrl.ForeColor = System.Drawing.Color.White;
+            this.CheckCtrl.Location = new System.Drawing.Point(5, 145);
+            this.CheckCtrl.Name = "CheckCtrl";
+            this.CheckCtrl.Size = new System.Drawing.Size(62, 17);
+            this.CheckCtrl.TabIndex = 5;
+            this.CheckCtrl.Text = "Bind Ctrl";
+            this.CheckCtrl.UseVisualStyleBackColor = false;
+            this.CheckCtrl.CheckedChanged += new System.EventHandler(this.CheckCtrl_CheckedChanged);
+            // 
+            // CheckAlt
+            // 
+            this.CheckAlt.AutoSize = true;
+            this.CheckAlt.BackColor = System.Drawing.Color.Black;
+            this.CheckAlt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckAlt.ForeColor = System.Drawing.Color.White;
+            this.CheckAlt.Location = new System.Drawing.Point(5, 167);
+            this.CheckAlt.Name = "CheckAlt";
+            this.CheckAlt.Size = new System.Drawing.Size(59, 17);
+            this.CheckAlt.TabIndex = 5;
+            this.CheckAlt.Text = "Bind Alt";
+            this.CheckAlt.UseVisualStyleBackColor = false;
+            this.CheckAlt.CheckedChanged += new System.EventHandler(this.CheckAlt_CheckedChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(201, 120);
+            this.ClientSize = new System.Drawing.Size(201, 187);
             this.Controls.Add(this.ComboColorTwo);
             this.Controls.Add(this.ComboColorOne);
             this.Controls.Add(this.ComboFonts);
+            this.Controls.Add(this.CheckAlt);
+            this.Controls.Add(this.CheckCtrl);
+            this.Controls.Add(this.CheckShift);
             this.Controls.Add(this.Autorun);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.NameLabel);
@@ -163,6 +211,9 @@
         private System.Windows.Forms.ComboBox ComboFonts;
         private System.Windows.Forms.ComboBox ComboColorOne;
         private System.Windows.Forms.ComboBox ComboColorTwo;
+        private System.Windows.Forms.CheckBox CheckShift;
+        private System.Windows.Forms.CheckBox CheckCtrl;
+        private System.Windows.Forms.CheckBox CheckAlt;
 
         public bool CurrTheme { get; private set; }
     }
