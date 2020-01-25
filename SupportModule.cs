@@ -39,6 +39,9 @@ namespace Supply
         public static int NumOfStrokes;
         public static bool NewFile = false;
         public static bool ShiftMod = false, CtrlMod = false, AltMod = false, WinMod = false;
+        public static Keys Key1, Key2, Key3, Key4, Key5, Key6, Key7, Key8, Key9, Key10;
+
+        #region Colors
 
         //Black - 0
         //Gray - 1
@@ -50,6 +53,9 @@ namespace Supply
         //Blue - 7
         //Pink - 8
         //Violet - 9
+
+        #endregion Colors
+
         public static void UpdateTheme()
         {
             switch (Key.GetValue("ColorOne"))
@@ -178,6 +184,17 @@ namespace Supply
             {
                 AltMod = true;
             }
+
+            Key1 = T3pyRYster.Settings.Default.Key1;
+            Key2 = T3pyRYster.Settings.Default.Key2;
+            Key3 = T3pyRYster.Settings.Default.Key3;
+            Key4 = T3pyRYster.Settings.Default.Key4;
+            Key5 = T3pyRYster.Settings.Default.Key5;
+            Key6 = T3pyRYster.Settings.Default.Key6;
+            Key7 = T3pyRYster.Settings.Default.Key7;
+            Key8 = T3pyRYster.Settings.Default.Key8;
+            Key9 = T3pyRYster.Settings.Default.Key9;
+            Key10 = T3pyRYster.Settings.Default.Key10;
         }
 
         public static void CheckOnMiss()

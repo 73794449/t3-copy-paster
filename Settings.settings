@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="T3pyRYster" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Key1" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F1</Value>
+    </Setting>
+    <Setting Name="Key2" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F2</Value>
+    </Setting>
+    <Setting Name="Key3" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F3</Value>
+    </Setting>
+    <Setting Name="Key4" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F4</Value>
+    </Setting>
+    <Setting Name="Key5" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F5</Value>
+    </Setting>
+    <Setting Name="Key6" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F6</Value>
+    </Setting>
+    <Setting Name="Key7" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F7</Value>
+    </Setting>
+    <Setting Name="Key8" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F8</Value>
+    </Setting>
+    <Setting Name="Key9" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F9</Value>
+    </Setting>
+    <Setting Name="Key10" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">F10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

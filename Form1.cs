@@ -9,8 +9,10 @@ namespace T3pyRYster
     public partial class Form1 : Form
     {
         #region BindHotkeys
+
         // new Hotkey(Keys., false, true, false, false)
         private readonly Hotkey hkF1, hkF2, hkF3, hkF4, hkF5, hkF6, hkF7, hkF8, hkF9, hkF10;
+
         #endregion BindHotkeys
 
         public Form1()
@@ -19,6 +21,7 @@ namespace T3pyRYster
 
             SupportModule.CheckOnMiss();
             SupportModule.UpdateTheme();
+
             #region SetValuesAfterRestart
 
             TextOne.Text = SupportModule.GetValue(1);
@@ -35,18 +38,19 @@ namespace T3pyRYster
             #endregion SetValuesAfterRestart
 
             #region Bind hotkeys
+
             SupportModule.UpdateHotkeys();
 
-            hkF1 = new Hotkey(Keys.F1, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF2 = new Hotkey(Keys.F2, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF3 = new Hotkey(Keys.F3, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF4 = new Hotkey(Keys.F4, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF5 = new Hotkey(Keys.F5, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF6 = new Hotkey(Keys.F6, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF7 = new Hotkey(Keys.F7, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF8 = new Hotkey(Keys.F8, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF9 = new Hotkey(Keys.F9, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-            hkF10 = new Hotkey(Keys.F10, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF1 = new Hotkey(SupportModule.Key1, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF2 = new Hotkey(SupportModule.Key2, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF3 = new Hotkey(SupportModule.Key3, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF4 = new Hotkey(SupportModule.Key4, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF5 = new Hotkey(SupportModule.Key5, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF6 = new Hotkey(SupportModule.Key6, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF7 = new Hotkey(SupportModule.Key7, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF8 = new Hotkey(SupportModule.Key8, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF9 = new Hotkey(SupportModule.Key9, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+            hkF10 = new Hotkey(SupportModule.Key10, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
 
             hkF1.Pressed += delegate { SupportModule.CopyMe(TextOne); SendKeys.Send("^{v}"); };
             hkF1.Register(this);
@@ -72,6 +76,7 @@ namespace T3pyRYster
             #endregion Bind hotkeys
 
             #region Theme
+
             CloseButton.BackColor = SupportModule.ColorOne;
             CloseButton.ForeColor = SupportModule.ColorTwo;
             CloseButton.Font = SupportModule.AppFont;
@@ -173,7 +178,7 @@ namespace T3pyRYster
             Show();
         }
 
-        #region CopyPasterMain
+        #region TextChangeSave
 
         private void TextOne_TextChanged(object sender, EventArgs e) => SupportModule.SetValue(1, TextOne.Text);
 
@@ -195,6 +200,10 @@ namespace T3pyRYster
 
         private void TextTen_TextChanged(object sender, EventArgs e) => SupportModule.SetValue(10, TextTen.Text);
 
+        #endregion TextChangeSave
+
+        #region CopyClick
+
         private void CopyOne_Click(object sender, EventArgs e) => SupportModule.CopyMe(TextOne);
 
         private void CopyTwo_Click(object sender, EventArgs e) => SupportModule.CopyMe(TextTwo);
@@ -215,7 +224,6 @@ namespace T3pyRYster
 
         private void CopyTen_Click(object sender, EventArgs e) => SupportModule.CopyMe(TextTen);
 
-        #endregion CopyPasterMain
-
+        #endregion CopyClick
     }
 }
