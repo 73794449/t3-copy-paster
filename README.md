@@ -1,9 +1,9 @@
 # T3pyRYster  
-CopyPaster app  
-Use CTRL + F(number of stroke) for paste.  
-App hiding to tray(double click to open).  
-Always on top.  
-Always black(in future may add white mode support).  
+The CopyPaster app
+Custom themes  
+Custom hotkeys  
+Custom fonts  
+Default CopyPaste combination is CTRL + F(number of stroke)
+To apply setting restart app  
 In plans to add:  
-1) Custom hotkeys(Ready on 50%)  
-2) Custom num of strokes  
+Custom num of strokes  
