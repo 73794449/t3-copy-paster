@@ -60,6 +60,7 @@ namespace T3pyRYster
             CheckShift.BackColor = SupportModule.ColorOne;
             CheckShift.ForeColor = SupportModule.ColorTwo;
             CheckShift.Font = SupportModule.AppFont;
+
             #endregion Set Theme
         }
 
@@ -115,5 +116,30 @@ namespace T3pyRYster
                 SupportModule.Key.SetValue("AltMod", "0");
             }
         }
+
+        private void ComboHK1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Settings.Default.Key1 = SupportModule.KeySelector(ComboHK1.SelectedItem.ToString());
+            Settings.Default.Save();
+        }
+
+        private void ComboHK2_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key2 = SupportModule.KeySelector(ComboHK2.SelectedItem.ToString());
+
+        private void ComboHK3_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key3 = SupportModule.KeySelector(ComboHK3.SelectedItem.ToString());
+
+        private void ComboHK4_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key4 = SupportModule.KeySelector(ComboHK4.SelectedItem.ToString());
+
+        private void ComboHK5_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key5 = SupportModule.KeySelector(ComboHK5.SelectedItem.ToString());
+
+        private void ComboHK6_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key6 = SupportModule.KeySelector(ComboHK6.SelectedItem.ToString());
+
+        private void ComboHK7_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key7 = SupportModule.KeySelector(ComboHK7.SelectedItem.ToString());
+
+        private void ComboHK8_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key8 = SupportModule.KeySelector(ComboHK8.SelectedItem.ToString());
+
+        private void ComboHK9_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key9 = SupportModule.KeySelector(ComboHK9.SelectedItem.ToString());
+
+        private void ComboHK10_SelectedIndexChanged(object sender, EventArgs e) => Settings.Default.Key10 = SupportModule.KeySelector(ComboHK10.SelectedItem.ToString());
+
     }
 }

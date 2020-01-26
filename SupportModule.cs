@@ -196,7 +196,160 @@ namespace Supply
             Key9 = T3pyRYster.Settings.Default.Key9;
             Key10 = T3pyRYster.Settings.Default.Key10;
         }
-
+        public static Keys KeySelector(string name)
+        {
+            Keys SelectedKey = Keys.None;
+            switch (name)
+            {
+                case "A":
+                    SelectedKey = Keys.A;
+                    break;
+                case "B":
+                    SelectedKey = Keys.B;
+                    break;
+                case "C":
+                    SelectedKey = Keys.C;
+                    break;
+                case "D":
+                    SelectedKey = Keys.D;
+                    break;
+                case "E":
+                    SelectedKey = Keys.E;
+                    break;
+                case "F":
+                    SelectedKey = Keys.F;
+                    break;
+                case "G":
+                    SelectedKey = Keys.G;
+                    break;
+                case "H":
+                    SelectedKey = Keys.H;
+                    break;
+                case "I":
+                    SelectedKey = Keys.I;
+                    break;
+                case "J":
+                    SelectedKey = Keys.J;
+                    break;
+                case "K":
+                    SelectedKey = Keys.K;
+                    break;
+                case "L":
+                    SelectedKey = Keys.L;
+                    break;
+                case "M":
+                    SelectedKey = Keys.M;
+                    break;
+                case "N":
+                    SelectedKey = Keys.N;
+                    break;
+                case "O":
+                    SelectedKey = Keys.O;
+                    break;
+                case "P":
+                    SelectedKey = Keys.P;
+                    break;
+                case "Q":
+                    SelectedKey = Keys.Q;
+                    break;
+                case "R":
+                    SelectedKey = Keys.R;
+                    break;
+                case "S":
+                    SelectedKey = Keys.S;
+                    break;
+                case "T":
+                    SelectedKey = Keys.T;
+                    break;
+                case "U":
+                    SelectedKey = Keys.U;
+                    break;
+                case "V":
+                    SelectedKey = Keys.V;
+                    break;
+                case "W":
+                    SelectedKey = Keys.W;
+                    break;
+                case "X":
+                    SelectedKey = Keys.X;
+                    break;
+                case "Y":
+                    SelectedKey = Keys.Y;
+                    break;
+                case "Z":
+                    SelectedKey = Keys.Z;
+                    break;
+                case "0":
+                    SelectedKey = Keys.D0;
+                    break;
+                case "1":
+                    SelectedKey = Keys.D1;
+                    break;
+                case "2":
+                    SelectedKey = Keys.D2;
+                    break;
+                case "3":
+                    SelectedKey = Keys.D3;
+                    break;
+                case "4":
+                    SelectedKey = Keys.D4;
+                    break;
+                case "5":
+                    SelectedKey = Keys.D5;
+                    break;
+                case "6":
+                    SelectedKey = Keys.D6;
+                    break;
+                case "7":
+                    SelectedKey = Keys.D7;
+                    break;
+                case "8":
+                    SelectedKey = Keys.D8;
+                    break;
+                case "9":
+                    SelectedKey = Keys.D9;
+                    break;
+                case "F1":
+                    SelectedKey = Keys.F1;
+                    break;
+                case "F2":
+                    SelectedKey = Keys.F2;
+                    break;
+                case "F3":
+                    SelectedKey = Keys.F3;
+                    break;
+                case "F4":
+                    SelectedKey = Keys.F4;
+                    break;
+                case "F5":
+                    SelectedKey = Keys.F5;
+                    break;
+                case "F6":
+                    SelectedKey = Keys.F6;
+                    break;
+                case "F7":
+                    SelectedKey = Keys.F7;
+                    break;
+                case "F8":
+                    SelectedKey = Keys.F8;
+                    break;
+                case "F9":
+                    SelectedKey = Keys.F9;
+                    break;
+                case "F10":
+                    SelectedKey = Keys.F10;
+                    break;
+                case "F11":
+                    SelectedKey = Keys.F11;
+                    break;
+                case "F12":
+                    SelectedKey = Keys.F12;
+                    break;
+                default:
+                    break;
+            }
+            return SelectedKey;
+        }
         public static void CheckOnMiss()
         {
             if (Key.GetValue("ColorOne") == null)
