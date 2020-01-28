@@ -62,11 +62,11 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.NameLabel.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.White;
-            this.NameLabel.Location = new System.Drawing.Point(-2, 8);
+            this.NameLabel.Location = new System.Drawing.Point(7, 9);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(107, 15);
+            this.NameLabel.Size = new System.Drawing.Size(69, 15);
             this.NameLabel.TabIndex = 1;
             this.NameLabel.Text = "T3pyRYster";
             this.NameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveMe);
@@ -74,100 +74,100 @@
             // TextOne
             // 
             this.TextOne.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextOne.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextOne.Location = new System.Drawing.Point(1, 35);
+            this.TextOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextOne.Location = new System.Drawing.Point(1, 38);
             this.TextOne.Name = "TextOne";
-            this.TextOne.Size = new System.Drawing.Size(169, 19);
+            this.TextOne.Size = new System.Drawing.Size(169, 14);
             this.TextOne.TabIndex = 2;
             this.TextOne.TextChanged += new System.EventHandler(this.TextOne_TextChanged);
             // 
             // TextTwo
             // 
             this.TextTwo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextTwo.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextTwo.Location = new System.Drawing.Point(1, 65);
+            this.TextTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextTwo.Location = new System.Drawing.Point(1, 68);
             this.TextTwo.Name = "TextTwo";
-            this.TextTwo.Size = new System.Drawing.Size(169, 19);
+            this.TextTwo.Size = new System.Drawing.Size(169, 14);
             this.TextTwo.TabIndex = 2;
             this.TextTwo.TextChanged += new System.EventHandler(this.TextTwo_TextChanged);
             // 
             // TextThree
             // 
             this.TextThree.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextThree.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextThree.Location = new System.Drawing.Point(1, 95);
+            this.TextThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextThree.Location = new System.Drawing.Point(1, 98);
             this.TextThree.Name = "TextThree";
-            this.TextThree.Size = new System.Drawing.Size(169, 19);
+            this.TextThree.Size = new System.Drawing.Size(169, 14);
             this.TextThree.TabIndex = 2;
             this.TextThree.TextChanged += new System.EventHandler(this.TextThree_TextChanged);
             // 
             // TextFour
             // 
             this.TextFour.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextFour.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextFour.Location = new System.Drawing.Point(1, 125);
+            this.TextFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextFour.Location = new System.Drawing.Point(1, 128);
             this.TextFour.Name = "TextFour";
-            this.TextFour.Size = new System.Drawing.Size(169, 19);
+            this.TextFour.Size = new System.Drawing.Size(169, 14);
             this.TextFour.TabIndex = 2;
             this.TextFour.TextChanged += new System.EventHandler(this.TextFour_TextChanged);
             // 
             // TextFive
             // 
             this.TextFive.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextFive.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextFive.Location = new System.Drawing.Point(1, 155);
+            this.TextFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextFive.Location = new System.Drawing.Point(1, 158);
             this.TextFive.Name = "TextFive";
-            this.TextFive.Size = new System.Drawing.Size(169, 19);
+            this.TextFive.Size = new System.Drawing.Size(169, 14);
             this.TextFive.TabIndex = 2;
             this.TextFive.TextChanged += new System.EventHandler(this.TextFive_TextChanged);
             // 
             // TextSix
             // 
             this.TextSix.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextSix.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextSix.Location = new System.Drawing.Point(1, 185);
+            this.TextSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextSix.Location = new System.Drawing.Point(1, 188);
             this.TextSix.Name = "TextSix";
-            this.TextSix.Size = new System.Drawing.Size(169, 19);
+            this.TextSix.Size = new System.Drawing.Size(169, 14);
             this.TextSix.TabIndex = 2;
             this.TextSix.TextChanged += new System.EventHandler(this.TextSix_TextChanged);
             // 
             // TextSeven
             // 
             this.TextSeven.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextSeven.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextSeven.Location = new System.Drawing.Point(1, 215);
+            this.TextSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextSeven.Location = new System.Drawing.Point(1, 218);
             this.TextSeven.Name = "TextSeven";
-            this.TextSeven.Size = new System.Drawing.Size(169, 19);
+            this.TextSeven.Size = new System.Drawing.Size(169, 14);
             this.TextSeven.TabIndex = 2;
             this.TextSeven.TextChanged += new System.EventHandler(this.TextSeven_TextChanged);
             // 
             // TextEight
             // 
             this.TextEight.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextEight.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextEight.Location = new System.Drawing.Point(1, 245);
+            this.TextEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextEight.Location = new System.Drawing.Point(1, 248);
             this.TextEight.Name = "TextEight";
-            this.TextEight.Size = new System.Drawing.Size(169, 19);
+            this.TextEight.Size = new System.Drawing.Size(169, 14);
             this.TextEight.TabIndex = 2;
             this.TextEight.TextChanged += new System.EventHandler(this.TextEight_TextChanged);
             // 
             // TextNine
             // 
             this.TextNine.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextNine.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextNine.Location = new System.Drawing.Point(1, 275);
+            this.TextNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextNine.Location = new System.Drawing.Point(1, 278);
             this.TextNine.Name = "TextNine";
-            this.TextNine.Size = new System.Drawing.Size(169, 19);
+            this.TextNine.Size = new System.Drawing.Size(169, 14);
             this.TextNine.TabIndex = 2;
             this.TextNine.TextChanged += new System.EventHandler(this.TextNine_TextChanged);
             // 
             // TextTen
             // 
             this.TextTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextTen.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextTen.Location = new System.Drawing.Point(1, 305);
+            this.TextTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextTen.Location = new System.Drawing.Point(1, 308);
             this.TextTen.Name = "TextTen";
-            this.TextTen.Size = new System.Drawing.Size(169, 19);
+            this.TextTen.Size = new System.Drawing.Size(169, 14);
             this.TextTen.TabIndex = 2;
             this.TextTen.TextChanged += new System.EventHandler(this.TextTen_TextChanged);
             // 
@@ -185,6 +185,7 @@
             this.CopyTen.BackColor = System.Drawing.Color.Black;
             this.CopyTen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyTen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyTen.ForeColor = System.Drawing.Color.White;
             this.CopyTen.Location = new System.Drawing.Point(170, 300);
             this.CopyTen.Name = "CopyTen";
@@ -199,6 +200,7 @@
             this.CopySeven.BackColor = System.Drawing.Color.Black;
             this.CopySeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopySeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopySeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopySeven.ForeColor = System.Drawing.Color.White;
             this.CopySeven.Location = new System.Drawing.Point(170, 210);
             this.CopySeven.Name = "CopySeven";
@@ -213,6 +215,7 @@
             this.CopyNine.BackColor = System.Drawing.Color.Black;
             this.CopyNine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyNine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyNine.ForeColor = System.Drawing.Color.White;
             this.CopyNine.Location = new System.Drawing.Point(170, 270);
             this.CopyNine.Name = "CopyNine";
@@ -227,6 +230,7 @@
             this.CopySix.BackColor = System.Drawing.Color.Black;
             this.CopySix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopySix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopySix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopySix.ForeColor = System.Drawing.Color.White;
             this.CopySix.Location = new System.Drawing.Point(170, 180);
             this.CopySix.Name = "CopySix";
@@ -241,6 +245,7 @@
             this.CopyEight.BackColor = System.Drawing.Color.Black;
             this.CopyEight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyEight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyEight.ForeColor = System.Drawing.Color.White;
             this.CopyEight.Location = new System.Drawing.Point(170, 240);
             this.CopyEight.Name = "CopyEight";
@@ -255,6 +260,7 @@
             this.CopyThree.BackColor = System.Drawing.Color.Black;
             this.CopyThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyThree.ForeColor = System.Drawing.Color.White;
             this.CopyThree.Location = new System.Drawing.Point(170, 90);
             this.CopyThree.Name = "CopyThree";
@@ -269,6 +275,7 @@
             this.CopyFive.BackColor = System.Drawing.Color.Black;
             this.CopyFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyFive.ForeColor = System.Drawing.Color.White;
             this.CopyFive.Location = new System.Drawing.Point(170, 150);
             this.CopyFive.Name = "CopyFive";
@@ -283,6 +290,7 @@
             this.CopyTwo.BackColor = System.Drawing.Color.Black;
             this.CopyTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyTwo.ForeColor = System.Drawing.Color.White;
             this.CopyTwo.Location = new System.Drawing.Point(170, 60);
             this.CopyTwo.Name = "CopyTwo";
@@ -297,6 +305,7 @@
             this.CopyFour.BackColor = System.Drawing.Color.Black;
             this.CopyFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyFour.ForeColor = System.Drawing.Color.White;
             this.CopyFour.Location = new System.Drawing.Point(170, 120);
             this.CopyFour.Name = "CopyFour";
@@ -311,6 +320,7 @@
             this.CopyOne.BackColor = System.Drawing.Color.Black;
             this.CopyOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CopyOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CopyOne.ForeColor = System.Drawing.Color.White;
             this.CopyOne.Location = new System.Drawing.Point(170, 30);
             this.CopyOne.Name = "CopyOne";
@@ -325,6 +335,7 @@
             this.SettingsButton.BackColor = System.Drawing.Color.Black;
             this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
             this.SettingsButton.Location = new System.Drawing.Point(110, 0);
             this.SettingsButton.Name = "SettingsButton";
@@ -342,6 +353,7 @@
             this.HideButton.BackColor = System.Drawing.Color.Black;
             this.HideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HideButton.ForeColor = System.Drawing.Color.White;
             this.HideButton.Location = new System.Drawing.Point(140, 0);
             this.HideButton.Name = "HideButton";
@@ -356,6 +368,7 @@
             this.CloseButton.BackColor = System.Drawing.Color.Black;
             this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.Color.White;
             this.CloseButton.Location = new System.Drawing.Point(170, 0);
             this.CloseButton.Name = "CloseButton";
@@ -402,6 +415,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "T3pyRYster";
             this.TopMost = true;
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
