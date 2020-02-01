@@ -52,6 +52,8 @@ namespace Supply
             Key9 = T3pyRYster.Settings.Default.Key9,
             Key10 = T3pyRYster.Settings.Default.Key10;
         public static bool MinimizedStart = T3pyRYster.Settings.Default.StartMin;
+        public static bool SettingsOpenned = false;
+
         public static Keys KeySelector(string name)
         {
             Keys SelectedKey = Keys.None;

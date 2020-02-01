@@ -160,8 +160,12 @@ namespace T3pyRYster
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
-            settingsForm.Show();
+            if (!SupportModule.SettingsOpenned)
+            {
+                SettingsForm settingsForm = new SettingsForm();
+                settingsForm.Show();
+                SupportModule.SettingsOpenned = true;
+            }
         }
 
         private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)

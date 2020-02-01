@@ -131,7 +131,12 @@ namespace T3pyRYster
             #endregion Set Theme
         }
 
-        private void CloseButton_Click(object sender, EventArgs e) => Close();
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            SupportModule.SettingsOpenned = false;
+            Close();
+        }
+
         private void MoveMe(object sender, MouseEventArgs e) => SupportModule.MoveForm(e, this);
         private void Autorun_CheckedChanged(object sender, EventArgs e)
         {
