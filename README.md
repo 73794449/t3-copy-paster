@@ -5,5 +5,3 @@ Custom hotkeys
 Custom fonts  
 Default CopyPaste combination is CTRL + F(number of stroke)
 To apply setting restart app  
-In plans to add:  
-Custom num of strokes  
