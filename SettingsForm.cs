@@ -183,14 +183,7 @@ namespace T3pyRYster
 
         private void CheckMinimize_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckMinimize.Checked)
-            {
-                Settings.Default.StartMin = true;
-            }
-            else
-            {
-                Settings.Default.StartMin = false;
-            }
+            Settings.Default.StartMin = CheckMinimize.Checked;
             Settings.Default.Save();
         }
     }
