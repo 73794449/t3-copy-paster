@@ -22,8 +22,7 @@ namespace T3pyRYster
             #endregion AutoRun
             #region Fonts
             ComboFonts.Text = SupportModule.AppFont.Name;
-            FontFamily[] ffArray = FontFamily.Families;
-            foreach (FontFamily ff in ffArray)
+            foreach (FontFamily ff in FontFamily.Families)
             {
                 ComboFonts.Items.Add(ff.Name);
             }

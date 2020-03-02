@@ -72,11 +72,9 @@ namespace Binder
             { Unregister(); }
         }
 
-        public Hotkey Clone()
-        {
+        public Hotkey Clone() =>
             // Clone the whole object
-            return new Hotkey(keyCode, shift, control, alt, windows);
-        }
+            new Hotkey(keyCode, shift, control, alt, windows);
 
         public bool GetCanRegister(Control windowControl)
         {
@@ -235,19 +233,13 @@ namespace Binder
             return modifiers + keyName;
         }
 
-        public bool Empty
-        {
-            get { return keyCode == Keys.None; }
-        }
+        public bool Empty => keyCode == Keys.None;
 
-        public bool Registered
-        {
-            get { return registered; }
-        }
+        public bool Registered => registered;
 
         public Keys KeyCode
         {
-            get { return keyCode; }
+            get => keyCode;
             set
             {
                 // Save and reregister
@@ -258,7 +250,7 @@ namespace Binder
 
         public bool Shift
         {
-            get { return shift; }
+            get => shift;
             set
             {
                 // Save and reregister
@@ -269,7 +261,7 @@ namespace Binder
 
         public bool Control
         {
-            get { return control; }
+            get => control;
             set
             {
                 // Save and reregister
@@ -280,7 +272,7 @@ namespace Binder
 
         public bool Alt
         {
-            get { return this.alt; }
+            get => alt;
             set
             {
                 // Save and reregister
@@ -291,7 +283,7 @@ namespace Binder
 
         public bool Windows
         {
-            get { return this.windows; }
+            get => windows;
             set
             {
                 // Save and reregister
