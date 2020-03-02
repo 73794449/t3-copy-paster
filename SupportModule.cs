@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Binder;
+using Microsoft.Win32;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -53,6 +54,18 @@ namespace Supply
             Key10 = T3pyRYster.Settings.Default.Key10;
         public static bool MinimizedStart = T3pyRYster.Settings.Default.StartMin;
         public static bool SettingsOpenned = false;
+        #region BindHotkeys
+        readonly public static Hotkey hkF1 = new Hotkey(SupportModule.Key1, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF2 = new Hotkey(SupportModule.Key2, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF3 = new Hotkey(SupportModule.Key3, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF4 = new Hotkey(SupportModule.Key4, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF5 = new Hotkey(SupportModule.Key5, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF6 = new Hotkey(SupportModule.Key6, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF7 = new Hotkey(SupportModule.Key7, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF8 = new Hotkey(SupportModule.Key8, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF9 = new Hotkey(SupportModule.Key9, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey hkF10 = new Hotkey(SupportModule.Key10, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        #endregion BindHotkeys
 
         public static Keys KeySelector(string name)
         {
@@ -372,34 +385,6 @@ namespace Supply
             }
             T3pyRYster.Settings.Default.Save();
 
-        }
-        public static string KeyName(Keys key)
-        {
-            switch (key)
-            {
-                case Keys.D0:
-                    return "0";
-                case Keys.D1:
-                    return "1";
-                case Keys.D2:
-                    return "2";
-                case Keys.D3:
-                    return "3";
-                case Keys.D4:
-                    return "4";
-                case Keys.D5:
-                    return "5";
-                case Keys.D6:
-                    return "6";
-                case Keys.D7:
-                    return "7";
-                case Keys.D8:
-                    return "8";
-                case Keys.D9:
-                    return "9";
-                default:
-                    return key.ToString();
-            }
         }
     }
 }

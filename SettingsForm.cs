@@ -42,16 +42,16 @@ namespace T3pyRYster
             }
             #endregion KeyMods
             #region Keys
-            ComboHK1.Text = SupportModule.KeyName(SupportModule.Key1);
-            ComboHK2.Text = SupportModule.KeyName(SupportModule.Key2);
-            ComboHK3.Text = SupportModule.KeyName(SupportModule.Key3);
-            ComboHK4.Text = SupportModule.KeyName(SupportModule.Key4);
-            ComboHK5.Text = SupportModule.KeyName(SupportModule.Key5);
-            ComboHK6.Text = SupportModule.KeyName(SupportModule.Key6);
-            ComboHK7.Text = SupportModule.KeyName(SupportModule.Key7);
-            ComboHK8.Text = SupportModule.KeyName(SupportModule.Key8);
-            ComboHK9.Text = SupportModule.KeyName(SupportModule.Key9);
-            ComboHK10.Text = SupportModule.KeyName(SupportModule.Key10);
+            ComboHK1.Text = SupportModule.hkF1.ToString();
+            ComboHK2.Text = SupportModule.hkF2.ToString();
+            ComboHK3.Text = SupportModule.hkF3.ToString();
+            ComboHK4.Text = SupportModule.hkF4.ToString();
+            ComboHK5.Text = SupportModule.hkF5.ToString();
+            ComboHK6.Text = SupportModule.hkF6.ToString();
+            ComboHK7.Text = SupportModule.hkF7.ToString();
+            ComboHK8.Text = SupportModule.hkF8.ToString();
+            ComboHK9.Text = SupportModule.hkF9.ToString();
+            ComboHK10.Text = SupportModule.hkF10.ToString();
             #endregion Keys
             #region Colors
             ComboColorOne.Text = SupportModule.ColorOne.ToString();

@@ -72,9 +72,11 @@ namespace Binder
             { Unregister(); }
         }
 
-        public Hotkey Clone() =>
+        public Hotkey Clone()
+        {
             // Clone the whole object
-            new Hotkey(keyCode, shift, control, alt, windows);
+            return new Hotkey(keyCode, shift, control, alt, windows);
+        }
 
         public bool GetCanRegister(Control windowControl)
         {
@@ -196,41 +198,45 @@ namespace Binder
             { return "(none)"; }
 
             // Build key name
-            string keyName = Enum.GetName(typeof(Keys), keyCode); ;
+            string keyName = Enum.GetName(typeof(Keys), keyCode);
             switch (keyCode)
             {
                 case Keys.D0:
-                case Keys.D1:
-                case Keys.D2:
-                case Keys.D3:
-                case Keys.D4:
-                case Keys.D5:
-                case Keys.D6:
-                case Keys.D7:
-                case Keys.D8:
-                case Keys.D9:
-                    // Strip the first character
-                    keyName = keyName.Substring(1);
+                    keyName =  "0";
                     break;
-
+                case Keys.D1:
+                    keyName = "1";
+                    break;
+                case Keys.D2:
+                    keyName = "2";
+                    break;
+                case Keys.D3:
+                    keyName = "3";
+                    break;
+                case Keys.D4:
+                    keyName = "4";
+                    break;
+                case Keys.D5:
+                    keyName = "5";
+                    break;
+                case Keys.D6:
+                    keyName = "6";
+                    break;
+                case Keys.D7:
+                    keyName = "7";
+                    break;
+                case Keys.D8:
+                    keyName = "8";
+                    break;
+                case Keys.D9:
+                    keyName = "9";
+                    break;
                 default:
                     // Leave everything alone
                     break;
             }
-
-            // Build modifiers
-            string modifiers = "";
-            if (shift)
-            { modifiers += "Shift+"; }
-            if (control)
-            { modifiers += "Control+"; }
-            if (alt)
-            { modifiers += "Alt+"; }
-            if (windows)
-            { modifiers += "Windows+"; }
-
             // Return result
-            return modifiers + keyName;
+            return keyName;
         }
 
         public bool Empty => keyCode == Keys.None;
