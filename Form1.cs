@@ -163,7 +163,7 @@ namespace T3pyRYster
             if (!SupportModule.SettingsOpenned)
             {
                 SettingsForm settingsForm = new SettingsForm();
-                settingsForm.Show();
+                    settingsForm.Show();
                 SupportModule.SettingsOpenned = true;
             }
         }
