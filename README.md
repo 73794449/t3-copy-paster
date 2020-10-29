@@ -5,4 +5,4 @@ Custom hotkeys.
 Custom fonts.  
 Default CopyPaste combination is CTRL + F(number of stroke).   
 
-To apply setting restart app.  
+To apply settings restart app.  
