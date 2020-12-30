@@ -155,31 +155,30 @@ namespace Binder
         private void Reregister()
         {
             // Only do something if the key is already registered
-            if (!registered)
-            { return; }
+            if (registered)
+            {             // Save control reference
+                Control windowControl = this.windowControl;
 
-            // Save control reference
-            Control windowControl = this.windowControl;
-
-            // Unregister and then reregister again
-            Unregister();
-            Register(windowControl);
+                // Unregister and then reregister again
+                Unregister();
+                Register(windowControl);
+            }
         }
 
         public bool PreFilterMessage(ref Message message)
         {
             // Only process WM_HOTKEY messages
-            if (message.Msg != WM_HOTKEY)
-            { return false; }
-
-            // Check that the ID is our key and we are registerd
-            if (registered && (message.WParam.ToInt32() == id))
-            {
-                // Fire the event and pass on the event if our handlers didn't handle it
-                return OnPressed();
+            if (message.Msg == WM_HOTKEY)
+            {             // Check that the ID is our key and we are registerd
+                if (registered && (message.WParam.ToInt32() == id))
+                {
+                    // Fire the event and pass on the event if our handlers didn't handle it
+                    return OnPressed();
+                }
+                else
+                { return false; }
             }
-            else
-            { return false; }
+            return false;
         }
 
         private bool OnPressed()
