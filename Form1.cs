@@ -31,26 +31,26 @@ namespace T3pyRYster
 
             #region Bind hotkeys
 
-            SupportModule.hkF1.Pressed += delegate { SupportModule.CopyMe(TextOne); SendKeys.Send("^{v}"); };
-            SupportModule.hkF1.Register(this);
-            SupportModule.hkF2.Pressed += delegate { SupportModule.CopyMe(TextTwo); SendKeys.Send("^{v}"); };
-            SupportModule.hkF2.Register(this);
-            SupportModule.hkF3.Pressed += delegate { SupportModule.CopyMe(TextThree); SendKeys.Send("^{v}"); };
-            SupportModule.hkF3.Register(this);
-            SupportModule.hkF4.Pressed += delegate { SupportModule.CopyMe(TextFour); SendKeys.Send("^{v}"); };
-            SupportModule.hkF4.Register(this);
-            SupportModule.hkF5.Pressed += delegate { SupportModule.CopyMe(TextFive); SendKeys.Send("^{v}"); };
-            SupportModule.hkF5.Register(this);
-            SupportModule.hkF6.Pressed += delegate { SupportModule.CopyMe(TextSix); SendKeys.Send("^{v}"); };
-            SupportModule.hkF6.Register(this);
-            SupportModule.hkF7.Pressed += delegate { SupportModule.CopyMe(TextSeven); SendKeys.Send("^{v}"); };
-            SupportModule.hkF7.Register(this);
-            SupportModule.hkF8.Pressed += delegate { SupportModule.CopyMe(TextEight); SendKeys.Send("^{v}"); };
-            SupportModule.hkF8.Register(this);
-            SupportModule.hkF9.Pressed += delegate { SupportModule.CopyMe(TextNine); SendKeys.Send("^{v}"); };
-            SupportModule.hkF9.Register(this);
-            SupportModule.hkF10.Pressed += delegate { SupportModule.CopyMe(TextTen); SendKeys.Send("^{v}"); };
-            SupportModule.hkF10.Register(this);
+            SupportModule.HKF[0].Pressed += delegate { SupportModule.CopyMe(TextOne); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[0].Register(this);
+            SupportModule.HKF[1].Pressed += delegate { SupportModule.CopyMe(TextTwo); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[1].Register(this);
+            SupportModule.HKF[2].Pressed += delegate { SupportModule.CopyMe(TextThree); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[2].Register(this);
+            SupportModule.HKF[3].Pressed += delegate { SupportModule.CopyMe(TextFour); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[3].Register(this);
+            SupportModule.HKF[4].Pressed += delegate { SupportModule.CopyMe(TextFive); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[4].Register(this);
+            SupportModule.HKF[5].Pressed += delegate { SupportModule.CopyMe(TextSix); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[5].Register(this);
+            SupportModule.HKF[6].Pressed += delegate { SupportModule.CopyMe(TextSeven); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[6].Register(this);
+            SupportModule.HKF[7].Pressed += delegate { SupportModule.CopyMe(TextEight); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[7].Register(this);
+            SupportModule.HKF[8].Pressed += delegate { SupportModule.CopyMe(TextNine); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[8].Register(this);
+            SupportModule.HKF[9].Pressed += delegate { SupportModule.CopyMe(TextTen); SendKeys.Send("^{v}"); };
+            SupportModule.HKF[9].Register(this);
 
             #endregion Bind hotkeys
 

@@ -41,226 +41,32 @@ namespace Supply
             CtrlMod = T3pyRYster.Settings.Default.CtrlMod,
             AltMod = T3pyRYster.Settings.Default.AltMod,
             WinMod = false; //because windows is system-wide button
-        public static Keys
-            Key1 = T3pyRYster.Settings.Default.Key1,
-            Key2 = T3pyRYster.Settings.Default.Key2,
-            Key3 = T3pyRYster.Settings.Default.Key3,
-            Key4 = T3pyRYster.Settings.Default.Key4,
-            Key5 = T3pyRYster.Settings.Default.Key5,
-            Key6 = T3pyRYster.Settings.Default.Key6,
-            Key7 = T3pyRYster.Settings.Default.Key7,
-            Key8 = T3pyRYster.Settings.Default.Key8,
-            Key9 = T3pyRYster.Settings.Default.Key9,
-            Key10 = T3pyRYster.Settings.Default.Key10;
+        public static Keys[] HKeys = { 
+            T3pyRYster.Settings.Default.Key1, T3pyRYster.Settings.Default.Key2, 
+            T3pyRYster.Settings.Default.Key3, T3pyRYster.Settings.Default.Key4, 
+            T3pyRYster.Settings.Default.Key5, T3pyRYster.Settings.Default.Key6,
+            T3pyRYster.Settings.Default.Key7, T3pyRYster.Settings.Default.Key8,
+            T3pyRYster.Settings.Default.Key9,T3pyRYster.Settings.Default.Key10 };
+
         public static bool MinimizedStart = T3pyRYster.Settings.Default.StartMin;
         public static bool SettingsOpenned = false;
         #region BindHotkeys
-        readonly public static Hotkey hkF1 = new Hotkey(SupportModule.Key1, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF2 = new Hotkey(SupportModule.Key2, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF3 = new Hotkey(SupportModule.Key3, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF4 = new Hotkey(SupportModule.Key4, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF5 = new Hotkey(SupportModule.Key5, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF6 = new Hotkey(SupportModule.Key6, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF7 = new Hotkey(SupportModule.Key7, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF8 = new Hotkey(SupportModule.Key8, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF9 = new Hotkey(SupportModule.Key9, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
-        readonly public static Hotkey hkF10 = new Hotkey(SupportModule.Key10, SupportModule.ShiftMod, SupportModule.CtrlMod, SupportModule.AltMod, SupportModule.WinMod);
+        readonly public static Hotkey[] HKF = { 
+            new Hotkey(HKeys[0], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[1], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[2], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[3], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[4], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[5], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[6], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[7], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[8], ShiftMod, CtrlMod, AltMod, WinMod),
+            new Hotkey(HKeys[9], ShiftMod, CtrlMod, AltMod, WinMod),
+    };
         #endregion BindHotkeys
 
-        public static Keys KeySelector(string name)
-        {
-            Keys SelectedKey = Keys.None;
-            switch (name)
-            {
-                case "A":
-                    SelectedKey = Keys.A;
-                    break;
-                case "B":
-                    SelectedKey = Keys.B;
-                    break;
-                case "C":
-                    SelectedKey = Keys.C;
-                    break;
-                case "D":
-                    SelectedKey = Keys.D;
-                    break;
-                case "E":
-                    SelectedKey = Keys.E;
-                    break;
-                case "F":
-                    SelectedKey = Keys.F;
-                    break;
-                case "G":
-                    SelectedKey = Keys.G;
-                    break;
-                case "H":
-                    SelectedKey = Keys.H;
-                    break;
-                case "I":
-                    SelectedKey = Keys.I;
-                    break;
-                case "J":
-                    SelectedKey = Keys.J;
-                    break;
-                case "K":
-                    SelectedKey = Keys.K;
-                    break;
-                case "L":
-                    SelectedKey = Keys.L;
-                    break;
-                case "M":
-                    SelectedKey = Keys.M;
-                    break;
-                case "N":
-                    SelectedKey = Keys.N;
-                    break;
-                case "O":
-                    SelectedKey = Keys.O;
-                    break;
-                case "P":
-                    SelectedKey = Keys.P;
-                    break;
-                case "Q":
-                    SelectedKey = Keys.Q;
-                    break;
-                case "R":
-                    SelectedKey = Keys.R;
-                    break;
-                case "S":
-                    SelectedKey = Keys.S;
-                    break;
-                case "T":
-                    SelectedKey = Keys.T;
-                    break;
-                case "U":
-                    SelectedKey = Keys.U;
-                    break;
-                case "V":
-                    SelectedKey = Keys.V;
-                    break;
-                case "W":
-                    SelectedKey = Keys.W;
-                    break;
-                case "X":
-                    SelectedKey = Keys.X;
-                    break;
-                case "Y":
-                    SelectedKey = Keys.Y;
-                    break;
-                case "Z":
-                    SelectedKey = Keys.Z;
-                    break;
-                case "0":
-                    SelectedKey = Keys.D0;
-                    break;
-                case "1":
-                    SelectedKey = Keys.D1;
-                    break;
-                case "2":
-                    SelectedKey = Keys.D2;
-                    break;
-                case "3":
-                    SelectedKey = Keys.D3;
-                    break;
-                case "4":
-                    SelectedKey = Keys.D4;
-                    break;
-                case "5":
-                    SelectedKey = Keys.D5;
-                    break;
-                case "6":
-                    SelectedKey = Keys.D6;
-                    break;
-                case "7":
-                    SelectedKey = Keys.D7;
-                    break;
-                case "8":
-                    SelectedKey = Keys.D8;
-                    break;
-                case "9":
-                    SelectedKey = Keys.D9;
-                    break;
-                case "F1":
-                    SelectedKey = Keys.F1;
-                    break;
-                case "F2":
-                    SelectedKey = Keys.F2;
-                    break;
-                case "F3":
-                    SelectedKey = Keys.F3;
-                    break;
-                case "F4":
-                    SelectedKey = Keys.F4;
-                    break;
-                case "F5":
-                    SelectedKey = Keys.F5;
-                    break;
-                case "F6":
-                    SelectedKey = Keys.F6;
-                    break;
-                case "F7":
-                    SelectedKey = Keys.F7;
-                    break;
-                case "F8":
-                    SelectedKey = Keys.F8;
-                    break;
-                case "F9":
-                    SelectedKey = Keys.F9;
-                    break;
-                case "F10":
-                    SelectedKey = Keys.F10;
-                    break;
-                case "F11":
-                    SelectedKey = Keys.F11;
-                    break;
-                case "F12":
-                    SelectedKey = Keys.F12;
-                    break;
-                default:
-                    break;
-            }
-            return SelectedKey;
-        }
-        public static Color ColorSelector(string name)
-        {
-            Color selectedColor = Color.White;
-            switch (name)
-            {
-                case "Black":
-                    selectedColor = Color.Black;
-                    break;
-                case "Gray":
-                    selectedColor = Color.Gray;
-                    break;
-                case "White":
-                    selectedColor = Color.White;
-                    break;
-                case "Yellow":
-                    selectedColor = Color.Yellow;
-                    break;
-                case "Orange":
-                    selectedColor = Color.Orange;
-                    break;
-                case "Red":
-                    selectedColor = Color.Red;
-                    break;
-                case "Green":
-                    selectedColor = Color.Green;
-                    break;
-                case "Blue":
-                    selectedColor = Color.Blue;
-                    break;
-                case "Pink":
-                    selectedColor = Color.Pink;
-                    break;
-                case "Violet":
-                    selectedColor = Color.Violet;
-                    break;
-                default:
-                    break;
-            }
-            return selectedColor;
-        }
+        public static Keys KeySelector(string name) => (Keys)Enum.Parse(typeof(Keys), name, true);
+        public static Color ColorSelector(string name) => ColorTranslator.FromHtml(name);
         public static void CopyMe(TextBox textBox)
         {
             if (textBox.Text != "")
@@ -268,43 +74,75 @@ namespace Supply
             else
             { Clipboard.Clear(); }
         }
+        private static bool ifnotlikeother(Keys key, int index)
+        {
+            for(int i = 0; i<10;i++)
+            {
+                if (HKF[i].KeyCode==key && index-1 != i)
+                {
+                    return false;
+                }
+            }
+            return true;
+            
+        }
         public static void AutoSaveHK(ComboBox BOX, int index)
         {
-            switch (index)
+            Keys kk = KeySelector(BOX.SelectedItem.ToString());
+            if (ifnotlikeother(kk, index))
             {
-                case 1:
-                    T3pyRYster.Settings.Default.Key1 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 2:
-                    T3pyRYster.Settings.Default.Key2 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 3:
-                    T3pyRYster.Settings.Default.Key3 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 4:
-                    T3pyRYster.Settings.Default.Key4 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 5:
-                    T3pyRYster.Settings.Default.Key5 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 6:
-                    T3pyRYster.Settings.Default.Key6 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 7:
-                    T3pyRYster.Settings.Default.Key7 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 8:
-                    T3pyRYster.Settings.Default.Key8 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 9:
-                    T3pyRYster.Settings.Default.Key9 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                case 10:
-                    T3pyRYster.Settings.Default.Key10 = KeySelector(BOX.SelectedItem.ToString());
-                    break;
-                default:
-                    break;
+                switch (index)
+                {
+                    case 1:
 
+                        T3pyRYster.Settings.Default.Key1 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key1;
+
+                        break;
+                    case 2:
+                        T3pyRYster.Settings.Default.Key2 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key2;
+                        break;
+                    case 3:
+                        T3pyRYster.Settings.Default.Key3 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key3;
+                        break;
+                    case 4:
+                        T3pyRYster.Settings.Default.Key4 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key4;
+                        break;
+                    case 5:
+                        T3pyRYster.Settings.Default.Key5 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key5;
+                        break;
+                    case 6:
+                        T3pyRYster.Settings.Default.Key6 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key6;
+                        break;
+                    case 7:
+                        T3pyRYster.Settings.Default.Key7 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key7;
+                        break;
+                    case 8:
+                        T3pyRYster.Settings.Default.Key8 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key8;
+                        break;
+                    case 9:
+                        T3pyRYster.Settings.Default.Key9 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key9;
+                        break;
+                    case 10:
+                        T3pyRYster.Settings.Default.Key10 = kk;
+                        HKF[index - 1].KeyCode = T3pyRYster.Settings.Default.Key10;
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("You cannot set same bind for two values, changes wont save.");
             }
             T3pyRYster.Settings.Default.Save();
         }
@@ -355,6 +193,7 @@ namespace Supply
                 {
                     case 1:
                         T3pyRYster.Settings.Default.CtrlMod = true;
+                        
                         break;
                     case 2:
                         T3pyRYster.Settings.Default.ShiftMod = true;
